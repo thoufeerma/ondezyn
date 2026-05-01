@@ -43,14 +43,14 @@ export default function Process() {
       </SectionWrapper>
 
       {/* Process CTA Section */}
-      <SectionWrapper id="process-cta" alternateBg={true} className="mt-[150px] container mx-auto px-10 max-w-[1400px]">
-        <div className="glass-panel p-20 rounded-[3rem] relative overflow-hidden reveal border-accent-gold/5">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-orange/5 blur-[100px] -z-10"></div>
+      <SectionWrapper id="process-cta" alternateBg={true} className="mt-20 lg:mt-[150px] container mx-auto px-5 lg:px-10 max-w-[1400px]">
+        <div className="glass-panel p-8 lg:p-20 rounded-3xl lg:rounded-[3rem] relative overflow-hidden reveal border-accent-gold/5">
+          <div className="absolute top-0 right-0 w-[200px] lg:w-[400px] h-[200px] lg:h-[400px] bg-accent-orange/5 blur-[100px] -z-10"></div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
-              <h2 className="text-4xl lg:text-5xl mb-8 leading-tight">Ready to create your <span className="gradient-text">own design?</span></h2>
-              <ul className="space-y-4 mb-10">
+              <h2 className="text-3xl lg:text-5xl mb-5 lg:mb-8 leading-tight">Ready to create your <span className="gradient-text">own design?</span></h2>
+              <ul className="space-y-3 lg:space-y-4 mb-8 lg:mb-10 text-sm lg:text-base">
                 {[
                   "Custom designs typically take 5–15 days",
                   "Limited consultation slots available",
@@ -69,11 +69,11 @@ export default function Process() {
               />
             </div>
             
-            <div className="relative h-[400px] rounded-2xl overflow-hidden border border-glass-border shadow-2xl">
+            <div className="relative h-[250px] lg:h-[400px] rounded-2xl overflow-hidden border border-glass-border shadow-2xl mt-4 lg:mt-0">
               <Image src="/images/story_stitching.png" alt="Craftsmanship" fill className="object-cover brightness-75 hover:scale-110 transition-transform duration-1000" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-white text-lg font-heading italic">"Every thread tells a story of dedication and precision."</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-8">
+                <p className="text-white/90 text-sm lg:text-lg font-heading italic">"Every thread tells a story of dedication and precision."</p>
               </div>
             </div>
           </div>

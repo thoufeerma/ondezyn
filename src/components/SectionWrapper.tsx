@@ -7,13 +7,14 @@ interface SectionWrapperProps {
   className?: string;
   id?: string;
   alternateBg?: boolean;
+  bgStyle?: "warm" | "cool" | "gold" | "default";
 }
 
-const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, className = "", id, alternateBg = false }) => {
+const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, className = "", id, alternateBg = false, bgStyle = "default" }) => {
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.1,
+      rootMargin: "0px 0px -30px 0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -27,7 +28,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, className = "
             const htmlEl = el as HTMLElement;
             // Apply staggered delay if not already set
             if (!htmlEl.style.transitionDelay) {
-              htmlEl.style.transitionDelay = `${index * 150}ms`;
+              htmlEl.style.transitionDelay = `${index * 120}ms`;
             }
             htmlEl.classList.add("visible");
           });
@@ -48,14 +49,28 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, className = "
     return () => observer.disconnect();
   }, [id]);
 
-  const bgClass = alternateBg ? "bg-gradient-to-b from-black via-[#0a0a0a] to-black" : "bg-black";
+  // Background gradient styles for section depth & color transitions
+  const bgGradients: Record<string, string> = {
+    default: "bg-bg-deep",
+    warm: "bg-gradient-to-b from-bg-deep via-[#0d0906] to-bg-deep",
+    cool: "bg-gradient-to-b from-bg-deep via-[#080a0d] to-bg-deep",
+    gold: "bg-gradient-to-b from-bg-deep via-[#0c0a05] to-bg-deep",
+  };
+
+  const bgClass = alternateBg ? bgGradients.warm : bgGradients[bgStyle] || bgGradients.default;
 
   return (
     <section 
       id={id} 
-      className={`${bgClass} transition-colors duration-1000 ${className} min-h-[10vh]`}
+      className={`relative ${className} min-h-[10vh]`}
     >
-      {children}
+      {/* Subtle center radial glow for depth */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.015)_0%,transparent_70%)] pointer-events-none" />
+      
+      {/* Content */}
+      <div className="relative z-[1]">
+        {children}
+      </div>
     </section>
   );
 };
