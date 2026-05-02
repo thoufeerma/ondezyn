@@ -56,7 +56,7 @@ const Footer = () => {
           <span>CIN: U14101KL2025PTC097419</span>
           <a href="http://WWW.ONDEZYN.COM" className="hover:text-white transition-colors">WWW.ONDEZYN.COM</a>
         </div>
-        <p className="opacity-50">Kollavarsham 1200</p>
+        <p className="opacity-50">Since 1200 – Keralam</p>
       </div>
     </footer>
   );

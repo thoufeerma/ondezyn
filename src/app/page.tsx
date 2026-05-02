@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
@@ -9,6 +9,7 @@ import { Quote, Package } from "lucide-react";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
 
   // Initial Loader
   useEffect(() => {
@@ -25,33 +26,17 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Scroll-based Animation for Hero Image
-  const [scrollY, setScrollY] = useState(0);
-
+  // Scroll parallax for hero image
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    
-    // Set initial scroll position
-    handleScroll();
-    
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate scroll-based animation values
-  const maxScroll = 150; // Complete quickly so the image appears early
-  const rawProgress = Math.min(Math.max(scrollY / maxScroll, 0), 1);
-  
-  // Smooth easing for premium feel (ease-out cubic)
-  const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
-  const animProgress = easeOutCubic(rawProgress);
+  // Image starts 180px below resting point on load, rises smoothly over 400px of scroll
+  const imageOffsetY = Math.max(0, 180 - scrollY * (180 / 400));
 
-  // Derived animation properties
-  const imageOpacity = animProgress;
-  const imageTranslateY = 30 * (1 - animProgress);
-  const imageScale = 0.99 + (0.01 * animProgress);
+
 
   return (
     <>
@@ -85,42 +70,36 @@ export default function Home() {
            <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent hidden sm:block"></div>
         </div>
 
-        {/* Heritage Line (Top Strip) */}
-        <div className="absolute top-[85px] lg:top-[90px] w-full flex justify-center z-20 reveal px-4">
-           <div className="flex items-center gap-3 lg:gap-4 text-center">
-              <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/50"></span>
-              <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold">Since 1200 – Keralam</span>
-              <span className="text-white/30 text-[10px] lg:text-xs font-medium tracking-widest hidden sm:inline-block border-l border-white/20 pl-3 lg:pl-4 uppercase">Kollavarsham Year 1200 (2025)</span>
-              <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/50"></span>
+        {/* Heritage Line — just below navbar, clearly above ONDEZYN text */}
+        <div className="absolute top-[84px] lg:top-[108px] w-full flex justify-center z-20 reveal px-4">
+           <div className="flex items-center gap-3 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
+              <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
+              <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold">
+                Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium ml-2 mr-2 hidden sm:inline-block">&bull;</span> <span className="text-white/55 font-medium hidden sm:inline-block">Since 1200 – Keralam</span>
+              </span>
+              <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
            </div>
         </div>
 
         <div className="container mx-auto px-5 lg:px-6 max-w-[1400px] relative z-10 w-full flex-1 flex flex-col justify-center mt-4">
           
-          {/* Main Background Typography */}
-          <div className="absolute top-[8%] lg:top-[12%] left-1/2 -translate-x-1/2 text-center w-full z-0 pointer-events-none reveal">
-             <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/5 font-heading tracking-tighter select-none">
-               ONDEZYN™
+          {/* Main Background Typography — sits well below heritage strip */}
+          <div className="absolute top-[18%] lg:top-[15%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
+             <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tighter select-none">
+               ONDEZYN
              </h1>
-             <p className="text-[clamp(1.2rem,4vw,3.5rem)] text-accent-gold/20 font-serif italic mt-[-1%] select-none">
+             <p className="text-[clamp(1.2rem,4vw,3.5rem)] text-accent-gold/35 font-heading tracking-tight mt-[-1%] select-none">
                Fashion Studio
              </p>
-             <h2 className="text-sm md:text-xl text-white/40 mt-4 lg:mt-6 font-serif italic font-light tracking-wide reveal delay-100 px-4">
-                "Designing Dreams into Perfect Fits"
-             </h2>
           </div>
 
-          {/* Center Layout Container */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[12vh] lg:mt-[20vh] z-10">
+          {/* Center Layout Container — pushed lower so image starts below text */}
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[14vh] lg:mt-[18vh] z-10">
              
              {/* Left Block */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-2 lg:order-1 mt-4 lg:mt-0">
                 <div className="mb-6 lg:mb-10">
-                   <div className="flex items-center gap-3 px-4 py-2.5 border border-white/10 w-fit mx-auto lg:mx-0 mb-4 lg:mb-6 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-accent-red/5 group-hover:bg-accent-red/10 transition-colors"></div>
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-red animate-pulse"></span>
-                      <span className="text-[11px] lg:text-xs font-medium text-white/70 tracking-widest uppercase">Launch: 22 Sept 2025</span>
-                   </div>
+
                    <p className="text-white/50 text-sm leading-relaxed font-light max-w-xs mx-auto lg:mx-0">
                       Exclusive fashion studio offering limited styling slots for a truly personalized experience.
                    </p>
@@ -131,26 +110,25 @@ export default function Home() {
                 />
              </div>
 
-             {/* Center Image (Editorial Cutout Style with Scroll Animation) */}
-             <div className="relative w-[80%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-20 order-1 lg:order-2 flex justify-center mt-[-3%] lg:mt-[-5%]">
+             {/* Center Image — starts below, rises on scroll, sits ABOVE background text */}
+             <div 
+               className="relative w-[80%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-1 lg:order-2 flex justify-center"
+               style={{ transform: `translateY(${imageOffsetY}px)`, transition: 'transform 0.15s ease-out' }}
+             >
                 {/* Soft diffused shadow & warm glow behind model (No card borders) */}
                 <div 
                   className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-black/80 blur-[80px] rounded-[100%] pointer-events-none z-0"
-                  style={{ opacity: imageOpacity }}
                 ></div>
                 <div 
                   className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[60%] h-[60%] bg-accent-gold/10 blur-[100px] rounded-[100%] pointer-events-none z-0"
-                  style={{ opacity: imageOpacity }}
                 ></div>
                 
                 {/* Main Image with Natural Edge Blending and Scroll Motion */}
                 <div 
-                  className="absolute inset-0 z-10 pointer-events-none will-change-transform"
+                  className="absolute inset-0 z-10 pointer-events-none"
                   style={{ 
                     WebkitMaskImage: 'radial-gradient(ellipse 40% 60% at 50% 50%, black 20%, transparent 100%)',
-                    maskImage: 'radial-gradient(ellipse 40% 60% at 50% 50%, black 20%, transparent 100%)',
-                    opacity: imageOpacity,
-                    transform: `translateY(${imageTranslateY}px) scale(${imageScale})`
+                    maskImage: 'radial-gradient(ellipse 40% 60% at 50% 50%, black 20%, transparent 100%)'
                   }}
                 >
                    <Image 

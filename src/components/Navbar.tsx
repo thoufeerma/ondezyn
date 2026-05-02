@@ -45,10 +45,10 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[9000] transition-all duration-500 border-b border-transparent ${scrolled ? 'bg-[#0a0805]/90 backdrop-blur-xl border-white/5 shadow-xl' : ''}`}>
+      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#050505]/60 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] border-white/10' : 'bg-gradient-to-b from-black/40 to-transparent border-transparent'}`}>
         <Link
           href="/"
-          className="transition-transform hover:scale-105 z-[9001]"
+          className="transition-transform hover:scale-105 z-[10]"
           aria-label="ONDEZYN Home"
         >
           <Image
@@ -56,7 +56,7 @@ const Navbar = () => {
             alt="ONDEZYN™ Logo"
             width={135}
             height={50}
-            className="object-contain w-[140px] lg:w-[135px] h-auto"
+            className="object-contain w-[85px] lg:w-[135px] h-auto"
             priority
             unoptimized
           />
@@ -81,7 +81,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <button
-          className="lg:hidden text-white/90 hover:text-white p-2 z-[9001] transition-transform active:scale-95"
+          className="lg:hidden text-white/90 hover:text-white p-2 z-[10] transition-transform active:scale-95"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
         >
@@ -91,7 +91,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Full-Screen Overlay */}
       <div
-        className={`fixed inset-0 bg-[#0a0805] z-[8999] flex flex-col justify-center items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+        className={`fixed inset-0 bg-[#050505]/95 backdrop-blur-lg z-[90] flex flex-col justify-center items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
           }`}
       >
         {/* Soft background glow */}
