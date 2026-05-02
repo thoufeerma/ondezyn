@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
@@ -9,15 +9,17 @@ import { Quote, Package } from "lucide-react";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
+  const [imageReady, setImageReady] = useState(false);
 
-  // Initial Loader
+  // Initial Loader & Animation Trigger
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setLoading(false), 1200);
+          setTimeout(() => {
+            setLoading(false);
+          }, 1200);
           return 100;
         }
         return prev + Math.floor(Math.random() * 12) + 3;
@@ -26,17 +28,13 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Scroll parallax for hero image
+  // Trigger hero image entrance animation after loader disappears
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Image starts 180px below resting point on load, rises smoothly over 400px of scroll
-  const imageOffsetY = Math.max(0, 180 - scrollY * (180 / 400));
-
-
+    if (!loading) {
+      const t = setTimeout(() => setImageReady(true), 150);
+      return () => clearTimeout(t);
+    }
+  }, [loading]);
 
   return (
     <>
@@ -83,8 +81,8 @@ export default function Home() {
 
         <div className="container mx-auto px-5 lg:px-6 max-w-[1400px] relative z-10 w-full flex-1 flex flex-col justify-center mt-4">
           
-          {/* Main Background Typography — sits well below heritage strip */}
-          <div className="absolute top-[18%] lg:top-[15%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
+          {/* Main Background Typography — positioned with clear gap below heritage strip */}
+          <div className="absolute top-[20%] lg:top-[18%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
              <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tighter select-none">
                ONDEZYN
              </h1>
@@ -110,10 +108,16 @@ export default function Home() {
                 />
              </div>
 
-             {/* Center Image — starts below, rises on scroll, sits ABOVE background text */}
-             <div 
+             {/* Center Image — rises into place on page load */}
+             <div
                className="relative w-[80%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-1 lg:order-2 flex justify-center"
-               style={{ transform: `translateY(${imageOffsetY}px)`, transition: 'transform 0.15s ease-out' }}
+               style={{
+                 transform: imageReady ? 'translateY(0px)' : 'translateY(300px)',
+                 opacity: imageReady ? 1 : 0,
+                 transition: imageReady
+                   ? 'transform 2.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 2s ease-out'
+                   : 'none',
+               }}
              >
                 {/* Soft diffused shadow & warm glow behind model (No card borders) */}
                 <div 
