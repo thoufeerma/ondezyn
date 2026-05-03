@@ -127,19 +127,13 @@ export default function Home() {
                   className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[60%] h-[60%] bg-accent-gold/10 blur-[100px] rounded-[100%] pointer-events-none z-0"
                 ></div>
                 
-                {/* Main Image with Natural Edge Blending and Scroll Motion */}
-                <div 
-                  className="absolute inset-0 z-10 pointer-events-none"
-                  style={{ 
-                    WebkitMaskImage: 'radial-gradient(ellipse 40% 60% at 50% 50%, black 20%, transparent 100%)',
-                    maskImage: 'radial-gradient(ellipse 40% 60% at 50% 50%, black 20%, transparent 100%)'
-                  }}
-                >
+                {/* Main Hero Image */}
+                <div className="absolute inset-0 z-10 pointer-events-none">
                    <Image 
                      src="/images/heromain.png" 
                      alt="ONDEZYN Model" 
                      fill 
-                     className="object-cover object-top scale-[1.05]" 
+                     className="object-cover object-top scale-[1.05] brightness-[1.1] contrast-[1.1]" 
                      priority 
                    />
                 </div>
