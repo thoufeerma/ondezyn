@@ -92,7 +92,7 @@ export default function Home() {
           
           {/* Main Background Typography — Hidden on mobile, replaced by compact header */}
           <div className="absolute top-[16%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal hidden lg:block">
-             <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tighter select-none">
+             <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tight select-none">
                ONDEZYN
              </h1>
              <p className="text-[clamp(1.2rem,4vw,3.5rem)] text-accent-gold/35 font-heading tracking-tight mt-[-1%] select-none">
@@ -102,7 +102,7 @@ export default function Home() {
 
           {/* Mobile Header (Only visible on small screens) — reduced top margin */}
           <div className="lg:hidden text-center mb-2 reveal mt-4">
-             <h1 className="text-4xl text-white font-heading tracking-tighter mb-0.5">ONDEZYN</h1>
+             <h1 className="text-4xl text-white font-heading tracking-tight mb-0.5">ONDEZYN</h1>
              <p className="text-[10px] text-accent-gold font-heading tracking-[0.3em] uppercase opacity-70">Fashion Studio</p>
           </div>
 
@@ -171,7 +171,7 @@ export default function Home() {
                 <CTAButton 
                   text="Explore Collections" 
                   href="/collections" 
-                  className="!bg-transparent border border-white/20 hover:border-accent-gold hover:text-accent-gold transition-all duration-300"
+                  className="!bg-transparent border border-white/20"
                 />
              </div>
           </div>
