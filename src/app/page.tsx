@@ -64,8 +64,8 @@ export default function Home() {
         <div className="absolute inset-0 flex justify-center gap-[15%] opacity-[0.03] pointer-events-none">
            <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent"></div>
            <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent"></div>
-           <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent hidden sm:block"></div>
-           <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent hidden sm:block"></div>
+           <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent"></div>
+           <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent"></div>
         </div>
 
         {/* Heritage Line — tightly aligned below navbar */}
@@ -73,7 +73,7 @@ export default function Home() {
            <div className="flex items-center gap-3 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold">
-                Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium ml-2 mr-2 hidden sm:inline-block">&bull;</span> <span className="text-white/55 font-medium hidden sm:inline-block">Since 1200 – Keralam</span>
+                Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium ml-2 mr-2">&bull;</span> <span className="text-white/55 font-medium">Since 1200 – Keralam</span>
               </span>
               <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
            </div>

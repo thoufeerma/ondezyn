@@ -30,7 +30,7 @@ export default function Process() {
           <div className="hidden lg:block absolute top-[40px] left-[5%] right-[5%] h-[1px] bg-gradient-to-r from-transparent via-glass-border to-transparent z-[1]"></div>
           
           {steps.map((step, i) => {
-            const isUnique = i === 1; // Step 2
+            const isUnique = i === 2; // Step 3
             return (
               <div key={i} className={`text-left lg:text-center relative z-[2] w-full lg:w-[18%] flex lg:block items-center gap-8 lg:gap-0 reveal group ${isUnique ? 'lg:-translate-y-4' : ''}`}>
                 <div className={`w-[80px] h-[80px] rounded-full bg-bg-deep border-2 flex items-center justify-center lg:mx-auto lg:mb-8 text-2xl font-heading font-bold transition-all duration-500 shrink-0 ${
