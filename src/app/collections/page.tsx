@@ -111,7 +111,7 @@ export default function Collections() {
       {/* Global Collection Footer CTA */}
       <SectionWrapper id="collections-cta" alternateBg={true} className="mt-[100px] container mx-auto px-10 max-w-[1400px]">
         <div className="glass-panel p-16 rounded-[3rem] text-center reveal border-accent-gold/10">
-          <h2 className="text-3xl lg:text-4xl mb-6">Didn't find what you're looking for?</h2>
+          <h2 className="mb-6">Didn&apos;t find what you&apos;re looking for?</h2>
           <p className="text-text-secondary mb-10 max-w-xl mx-auto font-light">We specialize in custom creations beyond our current catalog. Let's discuss your unique vision.</p>
           <CTAButton 
             text="Begin Your Custom Design" 

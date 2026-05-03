@@ -93,7 +93,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h5 className="text-xl mb-2 font-heading tracking-wide">Inquiries</h5>
-                  <p className="text-text-secondary text-lg font-light tracking-wider">99 55 00 22 09</p>
+                  <a href="tel:+919955002209" className="text-text-secondary text-lg font-light tracking-wider hover:text-accent-orange transition-colors">+91 99550 02209</a>
                 </div>
               </div>
               <div className="flex items-start gap-6 group">

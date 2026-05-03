@@ -60,7 +60,7 @@ export default function Process() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl lg:text-5xl mb-5 lg:mb-8 leading-tight">Ready to create your <span className="gradient-text">own design?</span></h2>
+              <h2 className="mb-5 lg:mb-8 leading-tight">Ready to create your <span className="gradient-text">own design?</span></h2>
               <ul className="space-y-3 lg:space-y-4 mb-8 lg:mb-10 text-sm lg:text-base">
                 {[
                   "Custom designs typically take 5–15 days",

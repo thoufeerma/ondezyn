@@ -193,7 +193,7 @@ export default function Home() {
             <div className="reveal-right">
               <div className="mb-8 lg:mb-12">
                 <h4 className="text-accent-orange tracking-widest uppercase text-sm mb-4">The Foundation</h4>
-                <h2 className="text-3xl lg:text-5xl xl:text-6xl mb-6 lg:mb-8 leading-tight">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
+                <h2 className="mb-6 lg:mb-8">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
                 <p className="text-base lg:text-lg text-text-secondary leading-[1.8] mb-6">
                   Founders <span className="text-white font-semibold">Hanslatha & Aneesh</span> started with a shared passion for redefining elegance. 
                   Born in the heart of Keralam, ONDEZYN is a sanctuary where creativity meets precision.
@@ -235,7 +235,7 @@ export default function Home() {
       <SectionWrapper id="collections-preview" className="py-12 lg:py-[100px] bg-gradient-to-b from-[#050505] via-[#080d16] to-[#050505]">
         <div className="container mx-auto px-5 lg:px-10 max-w-[1400px]">
           <div className="text-center mb-10 lg:mb-16 reveal">
-            <h2 className="text-3xl lg:text-5xl xl:text-6xl mb-4 lg:mb-5">Featured <span className="gradient-text">Collections</span></h2>
+            <h2 className="mb-4 lg:mb-5">Featured <span className="gradient-text">Collections</span></h2>
             <p className="text-base lg:text-xl text-text-secondary">Discover our most sought-after categories.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8">
@@ -328,7 +328,7 @@ export default function Home() {
           <div className="glass-panel text-center py-12 lg:py-[80px] px-6 lg:px-10 rounded-3xl lg:rounded-[40px] relative overflow-hidden reveal">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05)_0%,transparent_70%)] z-0"></div>
             <div className="relative z-[2]">
-              <h2 className="text-3xl lg:text-4xl xl:text-[3.5rem] mb-4 lg:mb-6 leading-tight">Ready for your <span className="gradient-text-gold">Masterpiece?</span></h2>
+            <h2 className="mb-4 lg:mb-6 leading-tight">Ready for your <span className="gradient-text-gold">Masterpiece?</span></h2>
               <p className="text-base lg:text-xl text-text-secondary mb-8 lg:mb-10 max-w-2xl mx-auto italic">Limited Slots Available Per Week</p>
               <CTAButton 
                 text="Begin Your Custom Design" 

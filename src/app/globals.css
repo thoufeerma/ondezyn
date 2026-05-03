@@ -78,13 +78,24 @@
     scroll-padding-top: 100px;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-heading font-bold tracking-tight leading-tight;
+  h1 {
+    @apply font-heading font-bold tracking-tighter leading-[1.1];
+  }
+
+  h2 {
+    @apply text-3xl lg:text-5xl xl:text-6xl font-heading font-bold tracking-tight leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-4xl font-heading font-bold tracking-tight leading-snug;
+  }
+
+  h4 {
+    @apply text-lg lg:text-xl font-heading font-semibold tracking-wide;
+  }
+
+  p, span, li, a, button {
+    @apply font-body;
   }
 
   ::-webkit-scrollbar {
