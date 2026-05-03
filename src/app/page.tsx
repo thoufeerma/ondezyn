@@ -56,7 +56,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════════════════════ */}
-      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[100px] lg:pt-[120px] pb-8 lg:pb-10 overflow-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
+      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[80px] lg:pt-[100px] pb-6 lg:pb-8 overflow-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
         {/* Subtle Radial Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] rounded-full bg-accent-gold/5 blur-[120px] pointer-events-none"></div>
 
@@ -68,8 +68,8 @@ export default function Home() {
            <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent hidden sm:block"></div>
         </div>
 
-        {/* Heritage Line — just below navbar, clearly above ONDEZYN text */}
-        <div className="absolute top-[84px] lg:top-[108px] w-full flex justify-center z-20 reveal px-4">
+        {/* Heritage Line — closer to navbar */}
+        <div className="absolute top-[70px] lg:top-[90px] w-full flex justify-center z-20 reveal px-4">
            <div className="flex items-center gap-3 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold">
@@ -79,10 +79,10 @@ export default function Home() {
            </div>
         </div>
 
-        <div className="container mx-auto px-5 lg:px-6 max-w-[1400px] relative z-10 w-full flex-1 flex flex-col justify-center mt-4">
+        <div className="container mx-auto px-5 lg:px-6 max-w-[1400px] relative z-10 w-full flex-1 flex flex-col justify-center">
           
-          {/* Main Background Typography — positioned with clear gap below heritage strip */}
-          <div className="absolute top-[20%] lg:top-[18%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
+          {/* Main Background Typography — tighter gap below heritage strip */}
+          <div className="absolute top-[16%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
              <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tighter select-none">
                ONDEZYN
              </h1>
@@ -91,8 +91,8 @@ export default function Home() {
              </p>
           </div>
 
-          {/* Center Layout Container — pushed lower so image starts below text */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[14vh] lg:mt-[18vh] z-10">
+          {/* Center Layout Container — tighter spacing */}
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[8vh] lg:mt-[10vh] z-10">
              
              {/* Left Block */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-2 lg:order-1 mt-4 lg:mt-0">

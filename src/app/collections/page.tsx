@@ -64,9 +64,9 @@ export default function Collections() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 px-0 sm:px-0">
           {categories.map((cat, i) => (
-            <div key={i} className={`group relative h-[600px] rounded-[2.5rem] overflow-hidden border border-glass-border reveal shadow-2xl transition-all duration-500`}>
+            <div key={i} className={`group relative h-[500px] sm:h-[600px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-glass-border reveal shadow-2xl transition-all duration-500 mx-auto w-[92%] sm:w-full`}>
               <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
                  {cat.image ? (
                    <Image src={cat.image} alt={cat.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
@@ -81,9 +81,9 @@ export default function Collections() {
               <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-300 ease-in-out`}></div>
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
               
-              <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                <div className="translate-y-12 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-                  <h3 className="text-3xl mb-4 font-heading group-hover:text-accent-orange transition-colors">{cat.title}</h3>
+              <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
+                <div className="translate-y-6 sm:translate-y-12 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                  <h3 className="text-2xl sm:text-3xl mb-3 sm:mb-4 font-heading group-hover:text-accent-orange transition-colors">{cat.title}</h3>
                   
                   <div className="flex flex-wrap gap-2 mb-8 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100">
                     {cat.items.map((item, idx) => (
@@ -97,7 +97,7 @@ export default function Collections() {
                     <CTAButton 
                       text="Create Your Signature Look" 
                       href="/contact"
-                      className="w-full justify-center !py-3 !text-sm"
+                      className="w-full justify-center !py-2.5 sm:!py-3 !text-[0.75rem] sm:!text-sm"
                       showIcon={false}
                     />
                   </div>

@@ -95,9 +95,10 @@ export default function Fabrics() {
                 <Image src="/images/fabrics/feature.png" alt="Artisan Atelier" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                   <div className="text-center">
-                     <Palette className="text-accent-orange mx-auto mb-4 opacity-50" size={60} />
-                     <span className="text-white/40 text-sm tracking-[0.5em] uppercase font-bold">Artisan Atelier</span>
+                   <div className="text-center px-6 py-4 bg-black/30 backdrop-blur-md rounded-2xl border border-white/5 shadow-2xl">
+                     <Palette className="text-accent-gold mx-auto mb-3 opacity-80" size={48} />
+                     <span className="text-white text-lg sm:text-2xl tracking-[0.4em] uppercase font-bold drop-shadow-2xl block">Artisan Atelier</span>
+                     <span className="text-accent-gold/60 text-[0.6rem] tracking-[0.2em] uppercase mt-2 block font-medium">Where Tradition Meets Vision</span>
                    </div>
                 </div>
              </div>

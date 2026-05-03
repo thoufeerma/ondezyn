@@ -8,8 +8,8 @@ import CTAButton from "@/components/CTAButton";
 export default function Process() {
   const steps = [
     { num: "01", title: "Consultation", desc: "We discuss your vision, occasions, and fabric preferences over a personalized session." },
-    { num: "02", title: "Material Sourcing", desc: "We handpick the finest silks, linens, and handloom fabrics tailored to your design's requirements." },
-    { num: "03", title: "Design & Sketch", desc: "Our designers translate your ideas into detailed sketches and select the perfect materials." },
+    { num: "02", title: "Design & Sketch", desc: "Our designers translate your ideas into detailed sketches and select the perfect materials." },
+    { num: "03", title: "Material Sourcing", desc: "We handpick the finest silks, linens, and handloom fabrics tailored to your design's requirements." },
     { num: "04", title: "Crafting", desc: "Master tailors and artisans begin the meticulous process of cutting, stitching, and embroidery." },
     { num: "05", title: "Final Fitting", desc: "The garment is adjusted to absolute perfection, ready to make its grand debut." }
   ];

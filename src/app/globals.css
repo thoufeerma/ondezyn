@@ -125,6 +125,7 @@
 @layer utilities {
   .glass-panel {
     @apply bg-glass-bg backdrop-blur-xl border border-glass-border shadow-[0_8px_32px_rgba(0,0,0,0.3)];
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   }
 
   .gradient-text {
