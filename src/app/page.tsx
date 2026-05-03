@@ -10,6 +10,15 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [imageReady, setImageReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Screen Size Detection
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Initial Loader & Animation Trigger
   useEffect(() => {
@@ -117,9 +126,9 @@ export default function Home() {
              <div
                className="relative w-[65%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-2 lg:order-2 flex justify-center"
                style={{
-                 transform: imageReady ? 'translateY(0px)' : 'translateY(300px)',
+                 transform: (isMobile || imageReady) ? 'translateY(0px)' : 'translateY(300px)',
                  opacity: 1,
-                 transition: imageReady
+                 transition: (!isMobile && imageReady)
                    ? 'transform 2.8s cubic-bezier(0.16, 1, 0.3, 1)'
                    : 'none',
                }}
