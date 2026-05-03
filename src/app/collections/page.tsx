@@ -69,7 +69,7 @@ export default function Collections() {
             <div key={i} className={`group relative h-[500px] sm:h-[600px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-glass-border reveal shadow-2xl transition-all duration-500 mx-auto w-[92%] sm:w-full`}>
               <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
                  {cat.image ? (
-                   <Image src={cat.image} alt={cat.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                   <Image src={cat.image} alt={cat.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110 brightness-75 sm:brightness-100" />
                  ) : (
                    <>
                      <Package className="text-white/5 group-hover:scale-110 transition-transform duration-700" size={80} />
@@ -78,8 +78,8 @@ export default function Collections() {
                  )}
               </div>
               
-              <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-300 ease-in-out`}></div>
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
+              <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-60 sm:opacity-40 group-hover:opacity-70 transition-opacity duration-300 ease-in-out`}></div>
+              <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
               
               <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
                 <div className="translate-y-6 sm:translate-y-12 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">

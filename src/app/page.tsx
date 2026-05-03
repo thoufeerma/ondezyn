@@ -103,7 +103,7 @@ export default function Home() {
                    </p>
                 </div>
                 <CTAButton 
-                  text="Begin Your Custom Experience" 
+                  text="Begin Custom Design" 
                   href="/contact" 
                 />
              </div>
@@ -131,15 +131,16 @@ export default function Home() {
                 <div 
                   className="absolute inset-0 z-10 pointer-events-none"
                   style={{ 
-                    WebkitMaskImage: 'radial-gradient(ellipse 50% 80% at 50% 50%, black 40%, transparent 100%)',
-                    maskImage: 'radial-gradient(ellipse 50% 80% at 50% 50%, black 40%, transparent 100%)'
+                    WebkitMaskImage: 'radial-gradient(ellipse 50% 80% at 50% 50%, black 70%, transparent 100%)',
+                    maskImage: 'radial-gradient(ellipse 50% 80% at 50% 50%, black 70%, transparent 100%)'
                   }}
                 >
                    <Image 
                      src="/images/heromain.png" 
                      alt="ONDEZYN Model" 
                      fill 
-                     className="object-cover object-top scale-[1.05]" 
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
+                     className="object-cover object-top" 
                      priority 
                    />
                 </div>
