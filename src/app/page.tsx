@@ -72,7 +72,7 @@ export default function Home() {
         <div className="absolute top-[10px] lg:top-[15px] w-full flex justify-center z-20 reveal px-4">
            <div className="flex items-center gap-3 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
-              <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold">
+              <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold whitespace-nowrap overflow-hidden text-ellipsis max-w-[85vw] sm:max-w-none">
                 Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium ml-2 mr-2">&bull;</span> <span className="text-white/55 font-medium">Since 1200 – Keralam</span>
               </span>
               <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
@@ -81,8 +81,8 @@ export default function Home() {
 
         <div className="container mx-auto px-5 lg:px-6 max-w-[1400px] relative z-10 w-full flex-1 flex flex-col justify-center">
           
-          {/* Main Background Typography — tighter gap below heritage strip */}
-          <div className="absolute top-[16%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
+          {/* Main Background Typography — Hidden on mobile, replaced by compact header */}
+          <div className="absolute top-[16%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal hidden lg:block">
              <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tighter select-none">
                ONDEZYN
              </h1>
@@ -91,13 +91,18 @@ export default function Home() {
              </p>
           </div>
 
-          {/* Center Layout Container — tighter spacing */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[4vh] lg:mt-[6vh] z-10">
-             
-             {/* Left Block */}
-             <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-2 lg:order-1 mt-4 lg:mt-0">
-                <div className="mb-6 lg:mb-10">
+          {/* Mobile Header (Only visible on small screens) */}
+          <div className="lg:hidden text-center mb-4 reveal mt-12">
+             <h1 className="text-5xl text-white font-heading tracking-tighter mb-1">ONDEZYN</h1>
+             <p className="text-lg text-accent-gold font-heading tracking-widest uppercase opacity-70">Fashion Studio</p>
+          </div>
 
+          {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[2vh] lg:mt-[6vh] z-10">
+             
+             {/* Left Block — CTA 1 */}
+             <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-2 lg:mt-0">
+                <div className="mb-4 lg:mb-10 hidden lg:block">
                    <p className="text-white/50 text-sm leading-relaxed font-light max-w-xs mx-auto lg:mx-0">
                       Exclusive fashion studio offering limited styling slots for a truly personalized experience.
                    </p>
@@ -110,7 +115,7 @@ export default function Home() {
 
              {/* Center Image — rises into place on page load */}
              <div
-               className="relative w-[80%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-1 lg:order-2 flex justify-center"
+               className="relative w-[70%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-2 lg:order-2 flex justify-center"
                style={{
                  transform: imageReady ? 'translateY(0px)' : 'translateY(300px)',
                  opacity: 1,
@@ -146,9 +151,9 @@ export default function Home() {
                 </div>
              </div>
 
-             {/* Right Block */}
-             <div className="lg:w-[30%] flex flex-col items-center lg:items-end text-center lg:text-right reveal-right delay-200 order-3 lg:order-3 mt-4 lg:mt-0">
-                <div className="mb-6 lg:mb-10">
+             {/* Right Block — CTA 2 */}
+             <div className="lg:w-[30%] flex flex-col items-center lg:items-end text-center lg:text-right reveal-right delay-200 order-4 lg:order-3 mt-2 lg:mt-0">
+                <div className="mb-4 lg:mb-10 hidden lg:block">
                    <p className="text-white/50 text-sm font-light leading-relaxed border-t lg:border-t-0 lg:border-l border-accent-gold/30 pt-4 lg:pt-0 lg:pl-5 max-w-xs mx-auto lg:mx-0">
                      <span className="text-white/90 font-medium block mb-2 font-serif italic text-base">Crafted by Hanslatha & Aneesh</span> 
                      blending tradition with modern luxury.
@@ -269,22 +274,22 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
                 
                 <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
-                  <div className="translate-y-4 lg:translate-y-12 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                  <div className="translate-y-0 lg:translate-y-12 lg:group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                     <h3 className="text-xl lg:text-3xl mb-2 lg:mb-4 font-heading group-hover:text-accent-orange transition-colors">{cat.title}</h3>
                     
-                    <div className="flex flex-wrap gap-2 mb-4 lg:mb-6 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 h-0 group-hover:h-auto overflow-hidden">
+                    <div className="flex flex-wrap gap-2 mb-4 lg:mb-6 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 delay-100 h-auto lg:h-0 lg:group-hover:h-auto overflow-hidden">
                       {cat.items.map((item, idx) => (
-                        <span key={idx} className="text-[0.6rem] lg:text-[0.65rem] px-2 lg:px-3 py-1 lg:py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/5 text-white/60 tracking-wider">
+                        <span key={idx} className="text-[0.6rem] lg:text-[0.65rem] px-2 lg:px-3 py-1 lg:py-1.5 rounded-full bg-white/10 lg:bg-white/5 backdrop-blur-md border border-white/10 lg:border-white/5 text-white/90 lg:text-white/60 tracking-wider">
                           {item}
                         </span>
                       ))}
                     </div>
 
-                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200">
+                    <div className="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 delay-200">
                       <CTAButton 
                         text="Explore" 
                         href="/collections"
-                        className="w-full justify-center !py-2 lg:!py-3 !text-xs lg:!text-sm"
+                        className="w-full justify-center !py-2 lg:!py-3 !text-[0.7rem] lg:!text-sm"
                         showIcon={false}
                       />
                     </div>

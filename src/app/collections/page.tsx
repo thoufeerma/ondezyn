@@ -93,22 +93,22 @@ export default function Collections() {
               <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
               
               <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
-                <div className="translate-y-6 sm:translate-y-12 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                <div className="translate-y-0 sm:translate-y-12 sm:group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                   <h3 className="text-2xl sm:text-3xl mb-3 sm:mb-4 font-heading group-hover:text-accent-orange transition-colors">{cat.title}</h3>
                   
-                  <div className="flex flex-wrap gap-2 mb-8 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-700 delay-100">
                     {cat.items.map((item, idx) => (
-                      <span key={idx} className="text-[0.65rem] px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/5 text-white/60 tracking-wider">
+                      <span key={idx} className="text-[0.6rem] sm:text-[0.65rem] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/10 sm:bg-white/5 backdrop-blur-md border border-white/10 sm:border-white/5 text-white/90 sm:text-white/60 tracking-wider">
                         {item}
                       </span>
                     ))}
                   </div>
 
-                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200">
+                  <div className="opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-700 delay-200">
                     <CTAButton 
-                      text="Create Your Signature Look" 
+                      text="Create Signature Look" 
                       href="/contact"
-                      className="w-full justify-center !py-2.5 sm:!py-3 !text-[0.75rem] sm:!text-sm"
+                      className="w-full justify-center !py-2 sm:!py-3 !text-[0.7rem] sm:!text-sm"
                       showIcon={false}
                     />
                   </div>
