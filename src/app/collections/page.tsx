@@ -75,8 +75,6 @@ export default function Collections() {
                    </>
                  )}
               </div>
-
-
               
               <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-60 sm:opacity-40 group-hover:opacity-70 transition-opacity duration-300 ease-in-out`}></div>
               <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
