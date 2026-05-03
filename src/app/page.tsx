@@ -68,8 +68,8 @@ export default function Home() {
            <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent hidden sm:block"></div>
         </div>
 
-        {/* Heritage Line — closer to navbar */}
-        <div className="absolute top-[70px] lg:top-[90px] w-full flex justify-center z-20 reveal px-4">
+        {/* Heritage Line — tightly aligned below navbar */}
+        <div className="absolute top-[10px] lg:top-[15px] w-full flex justify-center z-20 reveal px-4">
            <div className="flex items-center gap-3 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold">
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
 
           {/* Center Layout Container — tighter spacing */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[8vh] lg:mt-[10vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[4vh] lg:mt-[6vh] z-10">
              
              {/* Left Block */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-2 lg:order-1 mt-4 lg:mt-0">
