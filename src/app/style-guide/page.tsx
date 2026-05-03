@@ -3,7 +3,7 @@
 import React from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
-import { Scissors, Sparkles, BookOpen, Package, ArrowRight } from "lucide-react";
+import { Scissors, Sparkles, BookOpen, Package } from "lucide-react";
 
 export default function StyleGuide() {
   const articles = [
@@ -38,9 +38,7 @@ export default function StyleGuide() {
               <h3 className="text-2xl mb-4 leading-snug group-hover:text-white transition-colors duration-500">{blog.title}</h3>
               <p className="text-text-secondary mb-8 leading-relaxed font-light">{blog.desc}</p>
               
-              <button className="flex items-center gap-2 text-sm text-accent-orange/60 group-hover:text-accent-orange transition-all duration-300">
-                Read Full Story <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-              </button>
+
             </div>
           ))}
         </div>
