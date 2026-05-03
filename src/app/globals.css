@@ -198,4 +198,13 @@
     @apply w-full text-center px-6 py-4 text-sm;
     min-height: 48px;
   }
+
+  /* Prevent horizontal overflow from reveal-left/right on mobile */
+  .reveal-left, .reveal-right {
+    @apply -translate-x-0 translate-y-8;
+  }
+  
+  .reveal-left.visible, .reveal-right.visible {
+    @apply translate-y-0 opacity-100;
+  }
 }

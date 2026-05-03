@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${outfit.variable} bg-bg-deep text-white font-body overflow-x-hidden`}>
+      <body className={`${playfair.variable} ${outfit.variable} bg-bg-deep text-white font-body overflow-x-clip max-w-[100vw]`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

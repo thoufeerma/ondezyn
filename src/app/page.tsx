@@ -65,9 +65,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════════════════════ */}
-      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[80px] lg:pt-[100px] pb-6 lg:pb-8 overflow-x-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
-        {/* Subtle Radial Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] rounded-full bg-accent-gold/5 blur-[120px] pointer-events-none"></div>
+      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[80px] lg:pt-[100px] pb-6 lg:pb-8 overflow-x-clip bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
+        {/* Subtle Radial Glow — reduced size on mobile to prevent overflow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] lg:w-[600px] h-[280px] lg:h-[600px] rounded-full bg-accent-gold/5 blur-[80px] lg:blur-[120px] pointer-events-none"></div>
 
         {/* Vertical Light Streaks */}
         <div className="absolute inset-0 flex justify-center gap-[15%] opacity-[0.03] pointer-events-none">
