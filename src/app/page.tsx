@@ -56,7 +56,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════════════════════ */}
-      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[80px] lg:pt-[100px] pb-6 lg:pb-8 overflow-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
+      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[80px] lg:pt-[100px] pb-6 lg:pb-8 overflow-x-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
         {/* Subtle Radial Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] rounded-full bg-accent-gold/5 blur-[120px] pointer-events-none"></div>
 
@@ -69,13 +69,13 @@ export default function Home() {
         </div>
 
         {/* Heritage Line — tightly aligned below navbar */}
-        <div className="absolute top-[10px] lg:top-[15px] w-full flex justify-center z-20 reveal px-4">
-           <div className="flex items-center gap-3 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
-              <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
-              <span className="text-accent-gold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-[10px] lg:text-xs font-bold whitespace-nowrap overflow-hidden text-ellipsis max-w-[85vw] sm:max-w-none">
-                Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium ml-2 mr-2">&bull;</span> <span className="text-white/55 font-medium">Since 1200 – Keralam</span>
+        <div className="absolute top-[8px] lg:top-[15px] inset-x-0 flex justify-center z-20 reveal px-2">
+           <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
+              <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
+              <span className="text-accent-gold tracking-[0.08em] lg:tracking-[0.2em] uppercase text-[8px] lg:text-xs font-bold">
+                Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium mx-1">&bull;</span> Since 1200 – Keralam
               </span>
-              <span className="h-[1px] w-6 lg:w-8 bg-accent-gold/70"></span>
+              <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
            </div>
         </div>
 
@@ -91,10 +91,10 @@ export default function Home() {
              </p>
           </div>
 
-          {/* Mobile Header (Only visible on small screens) */}
-          <div className="lg:hidden text-center mb-4 reveal mt-12">
-             <h1 className="text-5xl text-white font-heading tracking-tighter mb-1">ONDEZYN</h1>
-             <p className="text-lg text-accent-gold font-heading tracking-widest uppercase opacity-70">Fashion Studio</p>
+          {/* Mobile Header (Only visible on small screens) — reduced top margin */}
+          <div className="lg:hidden text-center mb-2 reveal mt-4">
+             <h1 className="text-4xl text-white font-heading tracking-tighter mb-0.5">ONDEZYN</h1>
+             <p className="text-[10px] text-accent-gold font-heading tracking-[0.3em] uppercase opacity-70">Fashion Studio</p>
           </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
@@ -115,7 +115,7 @@ export default function Home() {
 
              {/* Center Image — rises into place on page load */}
              <div
-               className="relative w-[70%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-2 lg:order-2 flex justify-center"
+               className="relative w-[65%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-2 lg:order-2 flex justify-center"
                style={{
                  transform: imageReady ? 'translateY(0px)' : 'translateY(300px)',
                  opacity: 1,
