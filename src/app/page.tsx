@@ -113,9 +113,9 @@ export default function Home() {
                className="relative w-[80%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-1 lg:order-2 flex justify-center"
                style={{
                  transform: imageReady ? 'translateY(0px)' : 'translateY(300px)',
-                 opacity: imageReady ? 1 : 0,
+                 opacity: 1,
                  transition: imageReady
-                   ? 'transform 2.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 2s ease-out'
+                   ? 'transform 2.8s cubic-bezier(0.16, 1, 0.3, 1)'
                    : 'none',
                }}
              >
@@ -301,39 +301,7 @@ export default function Home() {
       {/* ═══ Section Divider ═══ */}
       <div className="section-divider"></div>
 
-      {/* ═══════════════════════════════════════════════════════════
-          TESTIMONIALS
-      ═══════════════════════════════════════════════════════════ */}
-      <SectionWrapper id="testimonials" className="py-12 lg:py-[100px] overflow-hidden bg-gradient-to-b from-[#050505] via-[#161009] to-[#050505]">
-        <div className="container mx-auto px-5 lg:px-10 max-w-[1400px]">
-          <div className="text-center mb-12 lg:mb-20 reveal">
-            <h2 className="text-3xl lg:text-5xl xl:text-6xl mb-4 lg:mb-5">Client <span className="gradient-text">Experiences</span></h2>
-            <p className="text-base lg:text-xl text-text-secondary">Voices of those who chose ONDEZYN for their special moments.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8">
-            {[
-              { name: "Anjali Menon", location: "Trivandrum", initial: "A", feedback: "My bridal gown was a dream. The Aari work was flawless." },
-              { name: "Riya Thomas", location: "Kochi", initial: "R", feedback: "Perfectly fitted blouse. Best fusion of handloom and modern style." },
-              { name: "Sneha Nair", location: "Mumbai", initial: "S", feedback: "Unmatched professionalism and artisanal quality. Stunning reality." }
-            ].map((test, i) => (
-              <div key={i} className="glass-panel p-7 lg:p-10 rounded-2xl relative group hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(255,111,0,0.1)] hover:border-accent-orange/30 transition-all duration-500 reveal backdrop-blur-xl">
-                <Quote className="text-accent-orange/20 mb-4 lg:mb-6 group-hover:text-accent-orange/40 transition-colors" size={32} />
-                <p className="text-base lg:text-lg leading-[1.6] mb-6 lg:mb-8 text-[#e0e0e0]">&quot;{test.feedback}&quot;</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-[40px] h-[40px] lg:w-[45px] lg:h-[45px] rounded-full bg-glass-bg flex items-center justify-center font-heading font-bold text-accent-gold border border-glass-border shrink-0 text-sm">{test.initial}</div>
-                  <div>
-                    <h5 className="text-[0.95rem] lg:text-[1rem] font-bold">{test.name}</h5>
-                    <p className="text-xs text-text-muted uppercase tracking-widest">{test.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
 
-      {/* ═══ Section Divider ═══ */}
-      <div className="section-divider"></div>
 
       {/* ═══════════════════════════════════════════════════════════
           SIGNATURE BRAND SECTION

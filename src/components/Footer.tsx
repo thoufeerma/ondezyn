@@ -53,7 +53,6 @@ const Footer = () => {
       <div className="container mx-auto max-w-[1400px] pt-5 lg:pt-8 border-t border-glass-border flex flex-col md:flex-row justify-between items-center text-text-muted text-[0.6rem] lg:text-[0.7rem] gap-2 lg:gap-4 text-center">
         <p>© 2025 ONDEZYN PRIVATE LIMITED. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
-          <span>CIN: U14101KL2025PTC097419</span>
           <a href="http://WWW.ONDEZYN.COM" className="hover:text-white transition-colors">WWW.ONDEZYN.COM</a>
         </div>
         <p className="opacity-50">Since 1200 – Keralam</p>
