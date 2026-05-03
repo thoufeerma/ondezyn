@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
-import { Package, Sparkles, Palette, Crown, Gem, Scissors, Star } from "lucide-react";
+import { Package } from "lucide-react";
 
 export default function Collections() {
   const categories = [
@@ -11,48 +11,42 @@ export default function Collections() {
       items: ["Signature Styles", "Hand crafted Uniques", "Designer Blouse", "Designer Salwar sets", "Mom & Daughter Combo"],
       msg: "Hi, I want to explore ONDEZYN Signature Designs",
       image: "/images/collection_aari.png",
-      color: "from-accent-red/20",
-      icon: Sparkles
+      color: "from-accent-red/20"
     },
     { 
       title: "Ethnic Wears", 
       items: ["Blouse", "Top", "Gowns", "Lehanga", "Anarkali Dresses", "Kurtis", "Palazzo sets", "Sharara sets", "Dhawani Sets"],
       msg: "Hi, I am interested in Ethnic Wear collection",
       image: "/images/collection_blouse.png",
-      color: "from-accent-gold/20",
-      icon: Palette
+      color: "from-accent-gold/20"
     },
     { 
       title: "Party Wears", 
       items: ["Indo Western Dresses", "Designer Gowns", "Crop top & Skirt sets", "Fusion wear"],
       msg: "Hi, I want a custom Party Wear design",
       image: "/images/gown.png",
-      color: "from-accent-orange/20",
-      icon: Crown
+      color: "from-accent-orange/20"
     },
     { 
       title: "Bridal Wears", 
       items: ["Bridal Blouses", "Bridal Lehenga", "Engagement/Reception Gowns", "Wedding Saree Custom styling / Pre-Pleating"],
       msg: "Hi, I am interested in Bridal Wear at ONDEZYN",
       image: "/images/collection_bridal.png",
-      color: "from-white/10",
-      icon: Gem
+      color: "from-white/10"
     },
     { 
       title: "Accessories", 
       items: ["Dupattas", "Falls & Pico", "Tassels & Latkans", "Fashion Accessories", "Premium fabrics"],
       msg: "Hi, I want details about accessories",
       image: "/images/collections/accessories.png",
-      color: "from-accent-red/10",
-      icon: Scissors
+      color: "from-accent-red/10"
     },
     { 
       title: "Kids Specials", 
       items: ["Birthday Outfits", "Fusion Outfits", "Festive Collections", "Traditional Pattu Pavada", "Lehenga", "Choli", "Frock", "Princess style Dresses"],
       msg: "Hi, I want outfits for kids collection",
       image: "/images/collections/kids.png",
-      color: "from-accent-gold/10",
-      icon: Star
+      color: "from-accent-gold/10"
     }
   ];
 
@@ -82,12 +76,7 @@ export default function Collections() {
                  )}
               </div>
 
-              {/* Glass Icon Overlay */}
-              <div className="absolute top-6 left-6 z-20">
-                <div className="w-12 h-12 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-accent-gold shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                  <cat.icon size={22} />
-                </div>
-              </div>
+
               
               <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-60 sm:opacity-40 group-hover:opacity-70 transition-opacity duration-300 ease-in-out`}></div>
               <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>

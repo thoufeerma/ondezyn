@@ -65,7 +65,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════════════════════ */}
-      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[80px] lg:pt-[100px] pb-6 lg:pb-8 overflow-x-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
+      <SectionWrapper id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-[70px] lg:pt-[100px] pb-6 lg:pb-8 overflow-x-hidden bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
         {/* Subtle Radial Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] rounded-full bg-accent-gold/5 blur-[120px] pointer-events-none"></div>
 
@@ -101,13 +101,13 @@ export default function Home() {
           </div>
 
           {/* Mobile Header (Only visible on small screens) — reduced top margin */}
-          <div className="lg:hidden text-center mb-2 reveal mt-4">
-             <h1 className="text-4xl text-white font-heading tracking-tighter mb-0.5">ONDEZYN</h1>
+          <div className="lg:hidden text-center mb-1 reveal mt-0">
+             <h1 className="text-4xl text-white font-heading tracking-tighter mb-0">ONDEZYN</h1>
              <p className="text-[10px] text-accent-gold font-heading tracking-[0.3em] uppercase opacity-70">Fashion Studio</p>
           </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[2vh] lg:mt-[6vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-10 mt-0 lg:mt-[6vh] z-10">
              
              {/* Left Block — CTA 1 */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-2 lg:mt-0">
@@ -124,7 +124,7 @@ export default function Home() {
 
              {/* Center Image — rises into place on page load */}
              <div
-               className="relative w-[65%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-2 lg:order-2 flex justify-center"
+               className="relative w-[75%] sm:w-[400px] lg:w-[560px] aspect-[4/5] z-[15] order-2 lg:order-2 flex justify-center"
                style={{
                  transform: (isMobile || imageReady) ? 'translateY(0px)' : 'translateY(300px)',
                  opacity: 1,
