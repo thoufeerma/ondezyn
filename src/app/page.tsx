@@ -81,8 +81,8 @@ export default function Home() {
         <div className="absolute top-[8px] lg:top-[15px] inset-x-0 flex justify-center z-20 reveal px-2">
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
-              <span className="text-accent-gold tracking-[0.08em] lg:tracking-[0.2em] uppercase text-[8px] lg:text-xs font-bold">
-                Rooted in Kerala&apos;s heritage <span className="text-white/55 font-medium mx-1">&bull;</span> Since 1200 – Keralam
+              <span className="text-accent-gold tracking-[0.05em] lg:tracking-[0.1em] text-[9px] lg:text-sm font-medium italic opacity-80">
+                Redefining luxury fashion through Keralam&apos;s rich heritage and exceptional custom tailoring.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
            </div>
@@ -95,7 +95,7 @@ export default function Home() {
              <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tight select-none">
                ONDEZYN
              </h1>
-             <p className="text-[clamp(1.2rem,4vw,3.5rem)] text-accent-gold/35 font-heading tracking-tight mt-[-1%] select-none">
+             <p className="text-[clamp(2.5rem,8vw,6.5rem)] text-accent-gold/40 font-script leading-none mt-[-2%] select-none">
                Fashion Studio
              </p>
           </div>
@@ -103,14 +103,14 @@ export default function Home() {
           {/* Mobile Header (Only visible on small screens) — reduced top margin */}
           <div className="lg:hidden text-center mb-2 reveal mt-4">
              <h1 className="text-4xl text-white font-heading tracking-tight mb-0.5">ONDEZYN</h1>
-             <p className="text-[10px] text-accent-gold font-heading tracking-[0.3em] uppercase opacity-70">Fashion Studio</p>
+             <p className="text-[20px] text-accent-gold/80 font-script leading-none opacity-90">Fashion Studio</p>
           </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[2vh] lg:mt-[6vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[4vh] lg:mt-[12vh] z-10">
              
              {/* Left Block — CTA 1 */}
-             <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-2 lg:mt-0">
+             <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-6 lg:mt-8">
                 <div className="mb-4 lg:mb-10 hidden lg:block">
                    <p className="text-white/50 text-sm leading-relaxed font-light max-w-xs mx-auto lg:mx-0">
                       Exclusive fashion studio offering limited styling slots for a truly personalized experience.
@@ -161,11 +161,11 @@ export default function Home() {
              </div>
 
              {/* Right Block — CTA 2 */}
-             <div className="lg:w-[30%] flex flex-col items-center lg:items-end text-center lg:text-right reveal-right delay-200 order-4 lg:order-3 mt-2 lg:mt-0">
+             <div className="lg:w-[30%] flex flex-col items-center lg:items-end text-center lg:text-right reveal-right delay-200 order-4 lg:order-3 mt-6 lg:mt-8">
                 <div className="mb-4 lg:mb-10 hidden lg:block">
                    <p className="text-white/50 text-sm font-light leading-relaxed border-t lg:border-t-0 lg:border-l border-accent-gold/30 pt-4 lg:pt-0 lg:pl-5 max-w-xs mx-auto lg:mx-0">
-                     <span className="text-white/90 font-medium block mb-2 font-serif italic text-base">Crafted by Hanslatha & Aneesh</span> 
-                     blending tradition with modern luxury.
+                     <span className="text-white/90 font-medium block mb-2 font-heading italic text-base">Where Identity Becomes Art.</span> 
+                     Bespoke fashion refined for those who command presence.
                    </p>
                 </div>
                 <CTAButton 
@@ -194,50 +194,107 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════
           BRAND STORY & MISSION/VISION
       ═══════════════════════════════════════════════════════════ */}
-      <SectionWrapper id="story" className="py-12 lg:py-[100px] relative bg-gradient-to-b from-[#050505] via-[#1a0b04] to-[#050505]">
-        <div className="container mx-auto px-5 lg:px-10 max-w-[1400px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative h-[350px] sm:h-[450px] lg:h-[700px]">
-              <div className="absolute top-0 left-0 w-[85%] h-[85%] rounded-2xl overflow-hidden z-[2] border border-glass-border reveal-left">
-                <Image src="/images/story_atelier.png" alt="ONDEZYN PRIVATE LIMITED" fill className="object-cover" />
-              </div>
-              <div className="absolute bottom-[5%] right-0 w-[55%] h-[55%] rounded-2xl overflow-hidden z-[3] shadow-[0_20px_40px_rgba(0,0,0,0.8)] border border-glass-border reveal delay-200">
-                <Image src="/images/story_stitching.png" alt="Craftsmanship" fill className="object-cover" />
-              </div>
-            </div>
-            <div className="reveal-right">
-              <div className="mb-8 lg:mb-12">
-                <h4 className="text-accent-orange tracking-widest uppercase text-sm mb-4">The Foundation</h4>
-                <h2 className="mb-6 lg:mb-8">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
-                <p className="text-base lg:text-lg text-text-secondary leading-[1.8] mb-6">
-                  Founders <span className="text-white font-semibold">Hanslatha & Aneesh</span> started with a shared passion for redefining elegance. 
-                  Born in the heart of Keralam, ONDEZYN is a sanctuary where creativity meets precision.
-                </p>
-              </div>
+      <SectionWrapper id="story" className="py-12 lg:py-[120px] relative bg-gradient-to-b from-[#050505] via-[#110d08] to-[#050505]">
+        <div className="container mx-auto px-5 lg:px-10 max-w-[1200px]">
+          
+          {/* ── Section Header ── */}
+          <div className="text-center mb-16 lg:mb-24 reveal">
+            <h4 className="text-accent-orange tracking-[0.3em] uppercase text-[10px] lg:text-xs mb-6 font-bold opacity-70">The Foundation</h4>
+            <h2 className="mb-8 lg:mb-10 text-4xl lg:text-6xl">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
+            <p className="text-base lg:text-lg text-text-secondary leading-[1.8] max-w-3xl mx-auto font-light">
+              Founders <span className="text-white font-semibold">Hanslatha & Aneesh</span> started with a shared passion for redefining elegance. 
+              Born in the heart of Keralam, ONDEZYN is a sanctuary where creativity meets precision.
+            </p>
+          </div>
 
-              <div className="space-y-6 lg:space-y-10">
-                <div className="glass-panel p-6 lg:p-8 rounded-2xl border-l-4 border-l-accent-red">
-                  <h3 className="text-lg lg:text-xl mb-3 flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-accent-red/20 flex items-center justify-center text-accent-red text-sm font-bold shrink-0">M</span>
-                    Our Mission
-                  </h3>
-                  <p className="text-text-secondary italic text-sm lg:text-base leading-relaxed">
-                    &quot;To craft custom tailored outfits with Creativity, Precision, Comfort, Quality and Passion to ensure every client feels confident and unique&quot;
-                  </p>
+          {/* ── 1. LARGE FEATURED CARD (IMAGE + TEXT) ── */}
+          <div className="reveal mb-16 lg:mb-24">
+            <div className="glass-panel rounded-[3.5rem] border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent overflow-hidden hover:border-accent-gold/30 hover:shadow-[0_40px_100px_rgba(212,175,55,0.12)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group">
+              <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
+                
+                {/* Left Side: Image Content */}
+                <div className="relative h-[400px] lg:h-auto min-h-[500px] lg:min-h-[650px] overflow-hidden">
+                  <Image 
+                    src="/images/story_atelier.png" 
+                    alt="The ONDEZYN Atelier" 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-[3000ms] ease-out opacity-70 grayscale-[30%] group-hover:grayscale-0" 
+                  />
+                  {/* Floating Detail Image */}
+                  <div className="absolute bottom-12 left-12 w-[48%] aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] z-10 hidden xl:block transition-transform duration-1000 group-hover:translate-y-[-10px]">
+                    <Image src="/images/story_stitching.png" alt="Craftsmanship detail" fill className="object-cover" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent lg:hidden"></div>
+                  {/* Decorative Border Overlay */}
+                  <div className="absolute inset-0 border-[20px] border-black/5 pointer-events-none"></div>
                 </div>
 
-                <div className="glass-panel p-6 lg:p-8 rounded-2xl border-l-4 border-l-accent-gold">
-                  <h3 className="text-lg lg:text-xl mb-3 flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold text-sm font-bold shrink-0">V</span>
-                    Our Vision
+                {/* Right Side: Editorial Content Area */}
+                <div className="p-10 lg:p-20 xl:p-24 flex flex-col justify-center relative bg-bg-dark/40 backdrop-blur-sm">
+                  <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-accent-gold/[0.02] to-transparent pointer-events-none"></div>
+                  
+                  {/* Subtle Label */}
+                  <div className="mb-6 reveal delay-100">
+                    <span className="text-[10px] lg:text-xs tracking-[0.4em] uppercase text-accent-gold/60 font-bold">Brand Philosophy</span>
+                  </div>
+                  
+                  {/* Elegant Editorial Heading */}
+                  <h3 className="text-4xl lg:text-5xl xl:text-7xl mb-12 font-heading text-white leading-[1.05] tracking-tight reveal delay-200">
+                    The Story Behind <br /> 
+                    <span className="text-accent-gold font-medium tracking-[0.02em]">ONDEZYN</span>
                   </h3>
-                  <p className="text-text-secondary italic text-sm lg:text-base leading-relaxed">
-                    &quot;To become a Leading Network of Premium Tailoring & Fashion Studio, redefining Elegance, Precision and every outfit reflects individuality through personalised designs, superior craftsmanship and exceptional customer experience&quot;
-                  </p>
+                  
+                  {/* Refined Storytelling Content */}
+                  <div className="space-y-8 text-text-secondary text-base lg:text-lg xl:text-xl leading-[1.8] font-light reveal delay-300">
+                    <div className="space-y-8 max-w-xl">
+                      <p>
+                        Our name is our philosophy. <span className="text-accent-gold font-semibold uppercase tracking-wider text-sm lg:text-base mr-1">ON</span> represents your identity, vision, and the unique individuality you bring to every design.
+                      </p>
+                      <p>
+                        <span className="text-accent-gold font-semibold uppercase tracking-wider text-sm lg:text-base mr-1">DEZYN</span> represents our dedicated art of craftsmanship and the custom fashion artistry we weave into every garment.
+                      </p>
+                      <p className="pt-8 border-t border-white/10 text-white/80 leading-relaxed italic">
+                        Together, <span className="text-white font-medium">ONDEZYN</span> reflects personalized luxury tailored entirely around <span className="text-accent-gold font-medium">you</span>.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* ── 2. BOTTOM THREE CARDS (ROW) ── */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 reveal">
+            
+            {/* Mission Card */}
+            <div className="glass-panel p-10 rounded-[2.5rem] border border-white/5 hover:border-accent-red/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(211,47,47,0.08)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col">
+              <div className="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center text-accent-red text-lg font-bold mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">M</div>
+              <h3 className="text-2xl mb-5 font-heading text-white/95">Our Mission</h3>
+              <p className="text-text-secondary italic text-base lg:text-lg leading-[1.7] font-light flex-1">
+                &quot;To craft custom tailored outfits with Creativity, Precision, and Passion to ensure every client feels unique.&quot;
+              </p>
+            </div>
+
+            {/* Vision Card (Teal/Emerald Color Update) */}
+            <div className="glass-panel p-10 rounded-[2.5rem] border border-white/5 hover:border-[#10b981]/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(16,185,129,0.08)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col">
+              <div className="w-12 h-12 rounded-2xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] text-lg font-bold mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">V</div>
+              <h3 className="text-2xl mb-5 font-heading text-white/95">Our Vision</h3>
+              <p className="text-text-secondary italic text-base lg:text-lg leading-[1.7] font-light flex-1">
+                &quot;To become a Leading Network of Premium Fashion Studios, redefining Elegance and Precision in every outfit.&quot;
+              </p>
+            </div>
+
+            {/* Presence Card */}
+            <div className="glass-panel p-10 rounded-[2.5rem] border border-white/5 hover:border-[#4f8ef7]/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(79,142,247,0.08)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col">
+              <div className="w-12 h-12 rounded-2xl bg-[#4f8ef7]/10 flex items-center justify-center text-[#4f8ef7] text-lg font-bold mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">N</div>
+              <h3 className="text-2xl mb-5 font-heading text-white/95">Nationwide</h3>
+              <p className="text-text-secondary text-base lg:text-lg leading-[1.7] font-light flex-1">
+                A growing movement with master artisans spanning across India, establishing a premium presence in every corner of the country.
+              </p>
+            </div>
+            
+          </div>
+
         </div>
       </SectionWrapper>
 
@@ -288,7 +345,7 @@ export default function Home() {
                     
                     <div className="flex flex-wrap gap-2 mb-4 lg:mb-6 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 delay-100 h-auto lg:h-0 lg:group-hover:h-auto overflow-hidden">
                       {cat.items.map((item, idx) => (
-                        <span key={idx} className="text-[0.6rem] lg:text-[0.65rem] px-2 lg:px-3 py-1 lg:py-1.5 rounded-full bg-white/10 lg:bg-white/5 backdrop-blur-md border border-white/10 lg:border-white/5 text-white/90 lg:text-white/60 tracking-wider">
+                        <span key={idx} className="text-[0.75rem] lg:text-[0.85rem] px-3 lg:px-4 py-1.5 lg:py-2 rounded-full bg-white/10 lg:bg-white/10 backdrop-blur-md border border-white/20 lg:border-white/20 text-white font-medium tracking-wide">
                           {item}
                         </span>
                       ))}

@@ -83,9 +83,9 @@ export default function Collections() {
                 <div className="translate-y-0 sm:translate-y-12 sm:group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                   <h3 className="text-2xl sm:text-3xl mb-3 sm:mb-4 font-heading group-hover:text-accent-orange transition-colors">{cat.title}</h3>
                   
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-700 delay-100">
+                  <div className="flex flex-wrap gap-2.5 sm:gap-3.5 mb-6 sm:mb-8 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-700 delay-100">
                     {cat.items.map((item, idx) => (
-                      <span key={idx} className="text-[0.6rem] sm:text-[0.65rem] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/10 sm:bg-white/5 backdrop-blur-md border border-white/10 sm:border-white/5 text-white/90 sm:text-white/60 tracking-wider">
+                      <span key={idx} className="text-[0.95rem] sm:text-[1.1rem] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/10 sm:bg-white/5 backdrop-blur-md border border-white/10 sm:border-white/5 text-white font-medium tracking-wide leading-tight shadow-sm">
                         {item}
                       </span>
                     ))}

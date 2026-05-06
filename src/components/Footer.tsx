@@ -18,7 +18,10 @@ const Footer = () => {
             </div>
           </div>
           <p className="hidden lg:block text-text-secondary leading-[1.6] mb-3 lg:mb-4 text-xs lg:text-base pr-4 lg:pr-0">Redefining luxury fashion through Keralam&apos;s rich heritage and exceptional custom tailoring.</p>
-          <p className="text-[0.55rem] lg:text-xs text-white/30 uppercase tracking-[0.2em] mb-1 lg:mb-0">Designing Dreams in to Perfect Fits</p>
+          <div className="flex flex-col gap-1 mb-1 lg:mb-0">
+            <p className="text-[0.55rem] lg:text-xs text-white/30 uppercase tracking-[0.2em]">Designing Dreams in to Perfect Fits</p>
+            <p className="text-[0.55rem] lg:text-xs text-accent-gold/40 font-medium tracking-[0.1em]">+91 99 55 00 22 09</p>
+          </div>
         </div>
         <div>
           <h4 className="text-sm lg:text-lg mb-3 lg:mb-6 text-white font-heading">Collections</h4>
@@ -50,12 +53,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto max-w-[1400px] pt-5 lg:pt-8 border-t border-glass-border flex flex-col md:flex-row justify-between items-center text-text-muted text-[0.6rem] lg:text-[0.7rem] gap-2 lg:gap-4 text-center">
-        <p>© 2025 ONDEZYN PRIVATE LIMITED. All rights reserved.</p>
+      <div className="container mx-auto max-w-[1400px] pt-5 lg:pt-8 border-t border-glass-border flex flex-col items-center text-text-muted text-[0.6rem] lg:text-[0.7rem] gap-2 lg:gap-3 text-center">
+        <p className="font-medium tracking-wide">© 2025 ONDEZYN™ PRIVATE LIMITED. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
           <a href="http://WWW.ONDEZYN.COM" className="hover:text-white transition-colors">WWW.ONDEZYN.COM</a>
         </div>
-        <p className="opacity-50">Since 1200 – Keralam</p>
       </div>
     </footer>
   );

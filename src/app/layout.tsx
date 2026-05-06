@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
+import { Playfair_Display, Outfit, Pinyon_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +8,12 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const playfair = Playfair_Display({
   variable: "--font-heading",
   subsets: ["latin"],
+});
+
+const pinyon = Pinyon_Script({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 const outfit = Outfit({
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${outfit.variable} bg-bg-deep text-white font-body overflow-x-clip max-w-[100vw]`}>
+      <body className={`${playfair.variable} ${outfit.variable} ${pinyon.variable} bg-bg-deep text-white font-body overflow-x-clip max-w-[100vw]`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
