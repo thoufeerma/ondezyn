@@ -82,7 +82,7 @@ export default function Home() {
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.05em] lg:tracking-[0.1em] text-[9px] lg:text-sm font-medium italic opacity-80">
-                Redefining luxury fashion through ONDEZYN&apos;s Keralam-inspired heritage, transforming your design dreams into the perfect fit through exceptional custom tailoring.
+                ONDEZYN transforms your design dreams into the perfect fit through luxury custom tailoring inspired by Keralam’s heritage.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
            </div>

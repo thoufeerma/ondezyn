@@ -74,9 +74,11 @@ const Navbar = () => {
               unoptimized
             />
           </Link>
-          <div className="hidden sm:flex items-center gap-3 lg:gap-4">
-            <span className="w-[1px] h-6 lg:h-8 bg-white/10"></span>
-            <p className="text-[18px] lg:text-[22px] text-white/60 font-script leading-none whitespace-nowrap tracking-wide"><span className="text-accent-orange/80">ON</span>DEZYN Fashion Studio</p>
+          <div className="hidden sm:flex flex-col items-start justify-center pl-4 lg:pl-6 border-l border-white/10 h-10 lg:h-12">
+            <p className="text-[12px] lg:text-[14px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
+              <span className="text-accent-orange">ON</span>DEZYN
+            </p>
+            <p className="text-[18px] lg:text-[22px] text-accent-gold/90 font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
           </div>
         </div>
 
