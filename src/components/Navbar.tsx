@@ -74,7 +74,7 @@ const Navbar = () => {
               unoptimized
             />
           </Link>
-          <div className="hidden sm:flex flex-col items-start justify-center pl-4 lg:pl-6 border-l border-white/10 h-10 lg:h-12">
+          <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-white/10 h-10 lg:h-12">
             <p className="text-[12px] lg:text-[14px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
               <span className="text-accent-orange">ON</span>DEZYN
             </p>
