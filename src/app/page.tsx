@@ -82,7 +82,7 @@ export default function Home() {
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.05em] lg:tracking-[0.1em] text-[9px] lg:text-sm font-medium italic opacity-80">
-                Redefining luxury fashion through Keralam&apos;s rich heritage and exceptional custom tailoring.
+                Redefining luxury fashion through ONDEZYN&apos;s Keralam-inspired heritage, transforming your design dreams into the perfect fit through exceptional custom tailoring.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
            </div>
@@ -292,7 +292,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-[#4f8ef7]/10 flex items-center justify-center text-[#4f8ef7] mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">
                 <Globe size={24} strokeWidth={2} />
               </div>
-              <h3 className="text-2xl mb-5 font-heading text-white/95">Nationwide</h3>
+              <h3 className="text-2xl mb-5 font-heading text-white/95">Nation-wide</h3>
               <p className="text-text-secondary text-base lg:text-lg leading-[1.7] font-light flex-1">
                 A growing movement with master artisans spanning across India, establishing a premium presence in every corner of the country.
               </p>

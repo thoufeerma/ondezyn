@@ -10,7 +10,7 @@ export default function StyleGuide() {
     { title: "Custom Design & Styling", tag: "Design", icon: Scissors, desc: "How bespoke tailoring transforms your silhouette and confidence." },
     { title: "Trend Based Design Suggestions", tag: "Trends", icon: Sparkles, desc: "Stay ahead with the latest seasonal palettes and cuts." },
     { title: "Fashion Tips for Every Occasion", tag: "Tips", icon: BookOpen, desc: "The art of choosing the right outfit for weddings and events." },
-    { title: "Seasonal Trends 2026", tag: "Seasonal", icon: Package, desc: "A deep dive into this year's most requested handloom styles." }
+    { title: "Seasonal Trends", tag: "Seasonal", icon: Package, desc: "A deep dive into this year's most requested handloom styles." }
   ];
 
   return (

@@ -76,7 +76,7 @@ const Navbar = () => {
           </Link>
           <div className="hidden sm:flex items-center gap-3 lg:gap-4">
             <span className="w-[1px] h-6 lg:h-8 bg-white/10"></span>
-            <p className="text-[18px] lg:text-[22px] text-white/60 font-script leading-none whitespace-nowrap tracking-wide">Fashion Studio</p>
+            <p className="text-[18px] lg:text-[22px] text-white/60 font-script leading-none whitespace-nowrap tracking-wide"><span className="text-accent-orange/80">ON</span>DEZYN Fashion Studio</p>
           </div>
         </div>
 
