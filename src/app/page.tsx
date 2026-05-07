@@ -99,11 +99,16 @@ export default function Home() {
                Fashion Studio
              </p>
           </div>
-
-
+          {/* Mobile Header (Only visible on small screens) — increased top margin for breathing room */}
+          <div className="lg:hidden text-center mb-6 reveal mt-12">
+             <h1 className="text-4xl text-white font-heading tracking-tight mb-1 uppercase">
+               <span className="text-accent-orange">ON</span>DEZYN
+             </h1>
+             <p className="text-[22px] text-accent-gold/90 font-script leading-none opacity-95">Fashion Studio</p>
+          </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[4vh] lg:mt-[12vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mt-[6vh] lg:mt-[12vh] z-10">
              
              {/* Left Block — CTA 1 */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-6 lg:mt-8">
