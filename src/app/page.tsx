@@ -92,10 +92,10 @@ export default function Home() {
           
           {/* Main Background Typography — Now visible on all screens with responsive sizing */}
           <div className="absolute top-[18%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
-             <h1 className="text-[clamp(4.5rem,14vw,14rem)] leading-[0.8] text-white/[0.07] lg:text-white/10 font-heading tracking-tight select-none">
-               <span className="text-accent-orange/10 lg:text-accent-orange/20">ON</span>DEZYN
+             <h1 className="text-[clamp(4.5rem,14vw,14rem)] leading-[0.8] text-white/[0.12] lg:text-white/15 font-heading tracking-tight select-none">
+               <span className="text-accent-orange/15 lg:text-accent-orange/25">ON</span>DEZYN
              </h1>
-             <p className="text-[clamp(3.5rem,8vw,6.5rem)] text-accent-gold/[0.15] lg:text-accent-gold/40 font-script leading-none mt-[-4%] lg:mt-[-2%] select-none">
+             <p className="text-[clamp(3.5rem,8vw,6.5rem)] text-accent-gold/[0.25] lg:text-accent-gold/45 font-script leading-none mt-[-4%] lg:mt-[-2%] select-none">
                Fashion Studio
              </p>
           </div>
