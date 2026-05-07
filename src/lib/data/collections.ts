@@ -15,7 +15,7 @@ export interface Collection {
 export const collectionsData: Record<string, Collection> = {
   "signature-designs": {
     id: "signature-designs",
-    title: "ONDEZYN Signature Designs",
+    title: "Signature Designs",
     heroImage: "/images/collections/signature_main.png",
     description: "Our signature creations represent the pinnacle of personalized luxury, where each garment is a unique masterpiece crafted to your exact specifications.",
     items: [
@@ -45,10 +45,10 @@ export const collectionsData: Record<string, Collection> = {
     heroImage: "/images/collections/party_main.png",
     description: "Make an unforgettable statement with our contemporary party wear, designed for the spotlight and crafted for elegance.",
     items: [
-      { name: "Indo Western Dresses", image: "/images/collections/indo_western.png", description: "The perfect fusion of global silhouettes and Indian artistry." },
+      { name: "Indo Western Dresses", image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200", description: "The perfect fusion of global silhouettes and Indian artistry." },
       { name: "Designer Gowns", image: "https://images.unsplash.com/photo-1599452388339-039c3629475e?q=80&w=1200", description: "Ethereal gowns that bring a touch of cinematic glamour." },
       { name: "Crop top & Skirt sets", image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1200", description: "Chic, modern coordinates for the stylish celebrant." },
-      { name: "Fusion wear", image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200", description: "Breaking boundaries with unique design combinations." }
+      { name: "Fusion wear", image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1200", description: "Breaking boundaries with unique design combinations." }
     ]
   },
   "bridal-wears": {
@@ -96,47 +96,12 @@ export async function getAllCollectionsSlugs(): Promise<string[]> {
   return Object.keys(collectionsData);
 }
 
-export const collectionsList = [
-  { 
-    title: "ONDEZYN Signature Designs", 
-    slug: "signature-designs",
-    items: ["Signature Styles", "Hand crafted Uniques", "Designer Blouse", "Designer Salwar sets", "Mom & Daughter Combo"],
-    image: "/images/collection_aari.png",
-    color: "from-accent-red/20"
-  },
-  { 
-    title: "Ethnic Wears", 
-    slug: "ethnic-wears",
-    items: ["Blouse", "Top", "Gowns", "Lehanga", "Anarkali Dresses", "Kurtis", "Palazzo sets", "Sharara sets", "Dhawani Sets"],
-    image: "/images/collection_blouse.png",
-    color: "from-accent-gold/20"
-  },
-  { 
-    title: "Party Wears", 
-    slug: "party-wears",
-    items: ["Indo Western Dresses", "Designer Gowns", "Crop top & Skirt sets", "Fusion wear"],
-    image: "/images/gown.png",
-    color: "from-accent-orange/20"
-  },
-  { 
-    title: "Bridal Wears", 
-    slug: "bridal-wears",
-    items: ["Bridal Blouses", "Bridal Lehenga", "Engagement/Reception Gowns", "Wedding Saree Custom styling / Pre-Pleating"],
-    image: "/images/collection_bridal.png",
-    color: "from-white/10"
-  },
-  { 
-    title: "Accessories", 
-    slug: "accessories",
-    items: ["Dupattas", "Falls & Pico", "Tassels & Latkans", "Fashion Accessories", "Premium fabrics"],
-    image: "/images/collections/accessories.png",
-    color: "from-accent-red/10"
-  },
-  { 
-    title: "Kids Specials", 
-    slug: "kids-specials",
-    items: ["Birthday Outfits", "Fusion Outfits", "Festive Collections", "Traditional Pattu Pavada", "Lehenga", "Choli", "Frock", "Princess style Dresses"],
-    image: "/images/collections/kids.png",
-    color: "from-accent-gold/10"
-  }
-];
+export const collectionsList = Object.values(collectionsData).map(c => ({
+  title: c.title,
+  slug: c.id,
+  items: c.items.map(item => item.name),
+  image: c.heroImage,
+  color: c.id === 'bridal-wears' ? 'from-white/10' : 
+         c.id === 'signature-designs' ? 'from-accent-gold/20' :
+         c.id === 'party-wears' ? 'from-accent-orange/20' : 'from-accent-red/20'
+}));

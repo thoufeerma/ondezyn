@@ -41,11 +41,12 @@ const Navbar = () => {
       name: "Collections", 
       href: "/collections",
       dropdown: [
-        { name: "Bridal Couture", href: "/collections#bridal" },
-        { name: "Luxury Pret", href: "/collections#pret" },
-        { name: "Ethnic Wear", href: "/collections#ethnic" },
-        { name: "Party Wear", href: "/collections#party" },
-        { name: "Accessories", href: "/collections#accessories" },
+        { name: "Signature Designs", href: "/collections/signature-designs" },
+        { name: "Ethnic Wears", href: "/collections/ethnic-wears" },
+        { name: "Party Wears", href: "/collections/party-wears" },
+        { name: "Bridal Wears", href: "/collections/bridal-wears" },
+        { name: "Accessories", href: "/collections/accessories" },
+        { name: "Kids Specials", href: "/collections/kids-specials" },
       ]
     },
     { name: "Process", href: "/process" },
