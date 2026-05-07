@@ -133,6 +133,14 @@ const Navbar = () => {
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
+
+        {/* Mobile Branding (Centered) */}
+        <div className="lg:hidden absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center h-10">
+          <p className="text-[10px] text-white font-heading tracking-[0.2em] leading-none mb-0.5 uppercase">
+            <span className="text-accent-orange">ON</span>DEZYN
+          </p>
+          <p className="text-[16px] text-accent-gold/90 font-script leading-none whitespace-nowrap">Fashion Studio</p>
+        </div>
       </header>
 
       {/* Mobile Menu Full-Screen Overlay */}

@@ -78,10 +78,10 @@ export default function Home() {
         </div>
 
         {/* Heritage Line — tightly aligned below navbar */}
-        <div className="absolute top-[8px] lg:top-[15px] inset-x-0 flex justify-center z-20 reveal px-2">
+        <div className="absolute top-[20px] lg:top-[15px] inset-x-0 flex justify-center z-20 reveal px-2">
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
-              <span className="text-accent-gold tracking-[0.05em] lg:tracking-[0.1em] text-[9px] lg:text-sm font-medium italic opacity-80">
+              <span className="text-accent-gold tracking-[0.03em] lg:tracking-[0.1em] text-[8px] lg:text-sm font-medium italic opacity-80">
                 ONDEZYN transforms your design dreams into the perfect fit through luxury custom tailoring inspired by Keralam’s heritage.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
@@ -100,11 +100,7 @@ export default function Home() {
              </p>
           </div>
 
-          {/* Mobile Header (Only visible on small screens) — reduced top margin */}
-          <div className="lg:hidden text-center mb-2 reveal mt-4">
-             <h1 className="text-4xl text-white font-heading tracking-tight mb-0.5"><span className="text-accent-orange">ON</span>DEZYN</h1>
-             <p className="text-[20px] text-accent-gold/80 font-script leading-none opacity-90">Fashion Studio</p>
-          </div>
+
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
           <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[4vh] lg:mt-[12vh] z-10">
