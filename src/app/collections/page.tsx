@@ -20,7 +20,8 @@ export default function CollectionsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
           {collectionsList.map((cat) => (
-            <div key={cat.slug} className="group relative h-[500px] sm:h-[600px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-glass-border shadow-2xl transition-all duration-500 mx-auto w-[92%] sm:w-full bg-bg-charcoal">
+            <div key={cat.slug} className="group relative h-[550px] sm:h-[650px] rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl transition-all duration-700 mx-auto w-[94%] sm:w-full bg-bg-charcoal">
+              {/* Background Image with more dimming */}
               <div className="absolute inset-0 flex items-center justify-center">
                  {cat.image ? (
                    <Image 
@@ -28,39 +29,53 @@ export default function CollectionsPage() {
                      alt={cat.title} 
                      fill 
                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                     className="object-cover transition-transform duration-1000 group-hover:scale-110 brightness-75 sm:brightness-100" 
+                     className="object-cover transition-transform duration-[2500ms] ease-[cubic-bezier(0.2,1,0.3,1)] group-hover:scale-110 brightness-[0.7] group-hover:brightness-[0.35]" 
                      loading="lazy"
                    />
                  ) : (
-                   <Package className="text-white/5 group-hover:scale-110 transition-transform duration-700" size={80} />
+                   <Package className="text-white/5 group-hover:scale-110 transition-transform duration-1000" size={80} />
                  )}
               </div>
               
-              <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-60 sm:opacity-40 group-hover:opacity-70 transition-opacity duration-300`}></div>
-              <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
+              {/* Deeper Gradients for Readability */}
+              <div className={`absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 opacity-70 group-hover:opacity-90 transition-opacity duration-1000`}></div>
               
-              <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
-                <div className="translate-y-0 sm:translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.2,1,0.3,1)]">
-                  <h3 className="text-2xl sm:text-3xl mb-3 sm:mb-5 font-heading text-white group-hover:text-accent-orange transition-colors">{cat.title}</h3>
-                  
-                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-75 h-auto sm:h-0 group-hover:h-auto overflow-hidden">
+              {/* Card Content - Structured Layout */}
+              <div className="absolute inset-0 p-8 sm:p-12 flex flex-col">
+                {/* Top Section: Heading and CTA */}
+                <div className="mb-auto">
+                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-1000 ease-[cubic-bezier(0.2,1,0.3,1)]">
+                    <span className="text-accent-gold text-[10px] tracking-[0.5em] uppercase font-bold mb-4 block opacity-60 group-hover:opacity-100 transition-opacity duration-700">COLLECTION</span>
+                    <h3 className="text-3xl sm:text-5xl font-heading text-white mb-10 group-hover:text-accent-gold transition-colors duration-700 leading-tight drop-shadow-2xl">
+                      {cat.title}
+                    </h3>
+                    
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 -translate-x-6 group-hover:translate-x-0">
+                      <CTAButton 
+                        text="Explore Collection" 
+                        href={`/collections/${cat.slug}`}
+                        className="!bg-accent-gold !text-black !px-10 !py-4 !text-[0.75rem] sm:!text-[0.8rem] tracking-[0.25em] shadow-2xl hover:!scale-105 transition-transform"
+                        showIcon={true}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Section: Sub-features (Smooth Staggered-like transition) */}
+                <div className="mt-auto pt-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.2,1,0.3,1)]">
+                  <p className="text-white/40 text-[9px] tracking-[0.4em] uppercase mb-6 font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-200">Featured Styles</p>
+                  <div className="flex flex-wrap gap-2 sm:gap-3 opacity-0 group-hover:opacity-100 transition-all duration-[1200ms] delay-300">
                     {cat.items.map((item) => (
-                      <span key={item} className="text-[0.8rem] sm:text-[0.9rem] px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/10 sm:bg-white/5 backdrop-blur-md border border-white/10 sm:border-white/5 text-white/90 font-medium tracking-wide">
+                      <span key={item} className="text-[0.75rem] sm:text-[0.85rem] px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-2xl border border-white/10 text-white/80 font-light hover:bg-white/10 hover:text-white hover:border-accent-gold/40 transition-all duration-500">
                         {item}
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-150">
-                    <CTAButton 
-                      text="Explore Collection" 
-                      href={`/collections/${cat.slug}`}
-                      className="w-full justify-center !py-2.5 sm:!py-3 !text-[0.7rem] sm:!text-xs tracking-[0.2em]"
-                      showIcon={false}
-                    />
-                  </div>
                 </div>
               </div>
+
+              {/* Decorative Border Glow */}
+              <div className="absolute inset-0 border-[1px] border-accent-gold/0 group-hover:border-accent-gold/20 transition-all duration-1000 rounded-[2.5rem] sm:rounded-[3rem] pointer-events-none"></div>
             </div>
           ))}
         </div>

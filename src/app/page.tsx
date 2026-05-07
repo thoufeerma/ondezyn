@@ -93,7 +93,7 @@ export default function Home() {
           {/* Main Background Typography — Hidden on mobile, replaced by compact header */}
           <div className="absolute top-[16%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal hidden lg:block">
              <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tight select-none">
-               ONDEZYN
+               <span className="text-accent-orange/20">ON</span>DEZYN
              </h1>
              <p className="text-[clamp(2.5rem,8vw,6.5rem)] text-accent-gold/40 font-script leading-none mt-[-2%] select-none">
                Fashion Studio
@@ -102,7 +102,7 @@ export default function Home() {
 
           {/* Mobile Header (Only visible on small screens) — reduced top margin */}
           <div className="lg:hidden text-center mb-2 reveal mt-4">
-             <h1 className="text-4xl text-white font-heading tracking-tight mb-0.5">ONDEZYN</h1>
+             <h1 className="text-4xl text-white font-heading tracking-tight mb-0.5"><span className="text-accent-orange">ON</span>DEZYN</h1>
              <p className="text-[20px] text-accent-gold/80 font-script leading-none opacity-90">Fashion Studio</p>
           </div>
 
@@ -200,7 +200,7 @@ export default function Home() {
           {/* ── Section Header ── */}
           <div className="text-center mb-16 lg:mb-32 reveal">
             <h4 className="text-accent-gold tracking-[0.4em] uppercase text-[10px] lg:text-xs mb-6 font-bold opacity-80">The Foundation</h4>
-            <h2 className="mb-8 lg:mb-10 text-4xl lg:text-6xl tracking-tight">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
+            <h2 className="mb-8 lg:mb-10 text-4xl lg:text-6xl tracking-tight text-white"><span className="text-accent-orange">ON</span>DEZYN PRIVATE LIMITED</h2>
             <p className="text-base lg:text-lg text-text-secondary leading-[1.8] max-w-3xl mx-auto font-light">
               Founded with a shared passion for redefining elegance, ONDEZYN is a sanctuary where creativity meets precision. 
               Born in the heart of Keralam, we craft more than just garments—we craft identities.
