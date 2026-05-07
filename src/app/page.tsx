@@ -81,7 +81,7 @@ export default function Home() {
         <div className="absolute top-[20px] lg:top-[15px] inset-x-0 flex justify-center z-20 reveal px-2">
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
-              <span className="text-accent-gold tracking-[0.03em] lg:tracking-[0.1em] text-[8px] lg:text-sm font-medium italic opacity-80">
+              <span className="text-accent-gold tracking-[0.03em] lg:tracking-[0.1em] text-[10px] lg:text-sm font-medium italic opacity-80">
                 ONDEZYN transforms your design dreams into the perfect fit through luxury custom tailoring inspired by Keralam’s heritage.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
@@ -99,8 +99,8 @@ export default function Home() {
                Fashion Studio
              </p>
           </div>
-          {/* Mobile Header (Only visible on small screens) — increased top margin for breathing room */}
-          <div className="lg:hidden text-center mb-2 reveal mt-12">
+          {/* Mobile Header (Only visible on small screens) — reduced top margin */}
+          <div className="lg:hidden text-center mb-1 reveal mt-8">
              <h1 className="text-4xl text-white font-heading tracking-tight mb-1 uppercase">
                <span className="text-accent-orange">ON</span>DEZYN
              </h1>
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-2 lg:mt-[12vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-0 lg:mt-[12vh] z-10">
              
              {/* Left Block — CTA 1 */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-6 lg:mt-8">
