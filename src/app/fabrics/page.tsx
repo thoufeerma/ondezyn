@@ -173,32 +173,32 @@ export default function Fabrics() {
                 </div>
               </div>
 
-              {/* Card 3: Premium Texture */}
+              {/* Card 3: Bridal Collection Visual */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200", "Premium Handloom Texture")}
+                onClick={() => openLightbox("/images/collection_bridal.png", "Bridal Couture Fabrics")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200", "Premium Handloom Texture")}
-                aria-label="View Premium Texture image"
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collection_bridal.png", "Bridal Couture Fabrics")}
+                aria-label="View Bridal Fabric image"
               >
-                <Image src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200" alt="Premium Texture" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/collection_bridal.png" alt="Bridal Fabric" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
                 </div>
               </div>
 
-              {/* Card 4: Detailed Embroidery */}
+              {/* Card 4: Saree Styling Visual */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200", "Artisanal Embroidery")}
+                onClick={() => openLightbox("/images/collections/saree_item.png", "Saree Artistry")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200", "Artisanal Embroidery")}
-                aria-label="View Detailed Embroidery image"
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collections/saree_item.png", "Saree Artistry")}
+                aria-label="View Saree Artistry image"
               >
-                <Image src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200" alt="Detailed Embroidery" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/collections/saree_item.png" alt="Saree Artistry" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
