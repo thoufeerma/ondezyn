@@ -82,7 +82,7 @@ export default function Home() {
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.03em] lg:tracking-[0.1em] text-[10px] lg:text-sm font-medium italic opacity-80">
-                ONDEZYN transforms your design dreams into the perfect fit through luxury custom tailoring inspired by Keralam’s heritage.
+                Brand that designs dreams into the perfect fit through luxury custom tailoring.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
            </div>
@@ -90,25 +90,18 @@ export default function Home() {
 
         <div className="container mx-auto px-5 lg:px-6 max-w-[1400px] relative z-10 w-full flex-1 flex flex-col justify-center">
           
-          {/* Main Background Typography — Hidden on mobile, replaced by compact header */}
-          <div className="absolute top-[16%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal hidden lg:block">
-             <h1 className="text-[clamp(3rem,14vw,14rem)] leading-[0.8] text-white/10 font-heading tracking-tight select-none">
-               <span className="text-accent-orange/20">ON</span>DEZYN
+          {/* Main Background Typography — Now visible on all screens with responsive sizing */}
+          <div className="absolute top-[18%] lg:top-[14%] left-1/2 -translate-x-1/2 text-center w-full z-[5] pointer-events-none reveal">
+             <h1 className="text-[clamp(4.5rem,14vw,14rem)] leading-[0.8] text-white/[0.07] lg:text-white/10 font-heading tracking-tight select-none">
+               <span className="text-accent-orange/10 lg:text-accent-orange/20">ON</span>DEZYN
              </h1>
-             <p className="text-[clamp(2.5rem,8vw,6.5rem)] text-accent-gold/40 font-script leading-none mt-[-2%] select-none">
+             <p className="text-[clamp(3.5rem,8vw,6.5rem)] text-accent-gold/[0.15] lg:text-accent-gold/40 font-script leading-none mt-[-4%] lg:mt-[-2%] select-none">
                Fashion Studio
              </p>
           </div>
-          {/* Mobile Header (Only visible on small screens) — increased top margin to prevent subtitle overlap */}
-          <div className="lg:hidden text-center mb-1 reveal mt-24">
-             <h1 className="text-4xl text-white font-heading tracking-tight mb-1 uppercase">
-               <span className="text-accent-orange">ON</span>DEZYN
-             </h1>
-             <p className="text-[22px] text-accent-gold/90 font-script leading-none opacity-95">Fashion Studio</p>
-          </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-6 lg:mt-[12vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-[15vh] lg:mt-[12vh] z-20">
              
              {/* Left Block — CTA 1 */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-6 lg:mt-8">
