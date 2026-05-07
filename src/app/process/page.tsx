@@ -35,13 +35,13 @@ export default function Process() {
               <div key={i} className={`text-left lg:text-center relative z-[2] w-full lg:w-[18%] flex lg:block items-center gap-8 lg:gap-0 reveal group ${isUnique ? 'lg:-translate-y-4' : ''}`}>
                 <div className={`w-[80px] h-[80px] rounded-full bg-bg-deep border-2 flex items-center justify-center lg:mx-auto lg:mb-8 text-2xl font-heading font-bold transition-all duration-500 shrink-0 ${
                   isUnique 
-                    ? 'border-accent-gold text-accent-gold shadow-[0_0_30px_rgba(212,175,55,0.3)] bg-accent-gold/5 scale-110' 
+                    ? 'border-accent-gold text-accent-gold shadow-[0_0_30px_rgba(212,175,55,0.3)] bg-accent-gold/5 scale-110 group-hover:border-accent-orange group-hover:text-white group-hover:bg-accent-orange group-hover:shadow-[0_0_30px_rgba(255,111,0,0.4)]' 
                     : 'border-accent-orange text-accent-orange shadow-[0_0_20px_rgba(255,111,0,0.15)] group-hover:bg-accent-orange group-hover:text-white group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(255,111,0,0.4)]'
                 }`}>
                   {step.num}
                 </div>
                 <div>
-                  <h4 className={`text-2xl mb-3 lg:mb-4 transition-colors duration-500 ${isUnique ? 'text-accent-gold font-bold' : 'group-hover:text-accent-orange'}`}>{step.title}</h4>
+                  <h4 className={`text-2xl mb-3 lg:mb-4 transition-colors duration-500 ${isUnique ? 'text-accent-gold font-bold group-hover:text-accent-orange' : 'group-hover:text-accent-orange'}`}>{step.title}</h4>
                   <p className="text-text-secondary text-base leading-relaxed font-light">{step.desc}</p>
                 </div>
                 {isUnique && (

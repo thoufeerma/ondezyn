@@ -1,59 +1,15 @@
 import React from "react";
 import Image from "next/image";
+import { Package } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
-import { Package } from "lucide-react";
+import { collectionsList } from "@/lib/data/collections";
 
-export default function Collections() {
-  const categories = [
-    { 
-      title: "ONDEZYN Signature Designs", 
-      items: ["Signature Styles", "Hand crafted Uniques", "Designer Blouse", "Designer Salwar sets", "Mom & Daughter Combo"],
-      msg: "Hi, I want to explore ONDEZYN Signature Designs",
-      image: "/images/collection_aari.png",
-      color: "from-accent-red/20"
-    },
-    { 
-      title: "Ethnic Wears", 
-      items: ["Blouse", "Top", "Gowns", "Lehanga", "Anarkali Dresses", "Kurtis", "Palazzo sets", "Sharara sets", "Dhawani Sets"],
-      msg: "Hi, I am interested in Ethnic Wear collection",
-      image: "/images/collection_blouse.png",
-      color: "from-accent-gold/20"
-    },
-    { 
-      title: "Party Wears", 
-      items: ["Indo Western Dresses", "Designer Gowns", "Crop top & Skirt sets", "Fusion wear"],
-      msg: "Hi, I want a custom Party Wear design",
-      image: "/images/gown.png",
-      color: "from-accent-orange/20"
-    },
-    { 
-      title: "Bridal Wears", 
-      items: ["Bridal Blouses", "Bridal Lehenga", "Engagement/Reception Gowns", "Wedding Saree Custom styling / Pre-Pleating"],
-      msg: "Hi, I am interested in Bridal Wear at ONDEZYN",
-      image: "/images/collection_bridal.png",
-      color: "from-white/10"
-    },
-    { 
-      title: "Accessories", 
-      items: ["Dupattas", "Falls & Pico", "Tassels & Latkans", "Fashion Accessories", "Premium fabrics"],
-      msg: "Hi, I want details about accessories",
-      image: "/images/collections/accessories.png",
-      color: "from-accent-red/10"
-    },
-    { 
-      title: "Kids Specials", 
-      items: ["Birthday Outfits", "Fusion Outfits", "Festive Collections", "Traditional Pattu Pavada", "Lehenga", "Choli", "Frock", "Princess style Dresses"],
-      msg: "Hi, I want outfits for kids collection",
-      image: "/images/collections/kids.png",
-      color: "from-accent-gold/10"
-    }
-  ];
-
+export default function CollectionsPage() {
   return (
     <div className="pt-[120px] pb-[100px] bg-black">
       <SectionWrapper id="collections-hero" className="container mx-auto px-10 max-w-[1400px]">
-        <div className="text-center mb-20 reveal">
+        <div className="text-center mb-20">
           <h1 className="text-[clamp(3rem,6vw,5.5rem)] leading-[1] mb-6 text-white">
             Custom <span className="gradient-text-gold">Collections</span>
           </h1>
@@ -62,40 +18,44 @@ export default function Collections() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 px-0 sm:px-0">
-          {categories.map((cat, i) => (
-            <div key={i} className={`group relative h-[500px] sm:h-[600px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-glass-border reveal shadow-2xl transition-all duration-500 mx-auto w-[92%] sm:w-full`}>
-              <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+          {collectionsList.map((cat) => (
+            <div key={cat.slug} className="group relative h-[500px] sm:h-[600px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-glass-border shadow-2xl transition-all duration-500 mx-auto w-[92%] sm:w-full bg-bg-charcoal">
+              <div className="absolute inset-0 flex items-center justify-center">
                  {cat.image ? (
-                   <Image src={cat.image} alt={cat.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110 brightness-75 sm:brightness-100" />
+                   <Image 
+                     src={cat.image} 
+                     alt={cat.title} 
+                     fill 
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     className="object-cover transition-transform duration-1000 group-hover:scale-110 brightness-75 sm:brightness-100" 
+                     loading="lazy"
+                   />
                  ) : (
-                   <>
-                     <Package className="text-white/5 group-hover:scale-110 transition-transform duration-700" size={80} />
-                     <span className="absolute bottom-12 text-white/10 text-xs tracking-[0.3em] uppercase">Gallery Preview Placeholder</span>
-                   </>
+                   <Package className="text-white/5 group-hover:scale-110 transition-transform duration-700" size={80} />
                  )}
               </div>
               
-              <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-60 sm:opacity-40 group-hover:opacity-70 transition-opacity duration-300 ease-in-out`}></div>
-              <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300 ease-in-out"></div>
+              <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} to-transparent opacity-60 sm:opacity-40 group-hover:opacity-70 transition-opacity duration-300`}></div>
+              <div className="absolute inset-0 bg-black/40 sm:bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
               
               <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
-                <div className="translate-y-0 sm:translate-y-12 sm:group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-                  <h3 className="text-2xl sm:text-3xl mb-3 sm:mb-4 font-heading group-hover:text-accent-orange transition-colors">{cat.title}</h3>
+                <div className="translate-y-0 sm:translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.2,1,0.3,1)]">
+                  <h3 className="text-2xl sm:text-3xl mb-3 sm:mb-5 font-heading text-white group-hover:text-accent-orange transition-colors">{cat.title}</h3>
                   
-                  <div className="flex flex-wrap gap-2.5 sm:gap-3.5 mb-6 sm:mb-8 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-700 delay-100">
-                    {cat.items.map((item, idx) => (
-                      <span key={idx} className="text-[0.95rem] sm:text-[1.1rem] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/10 sm:bg-white/5 backdrop-blur-md border border-white/10 sm:border-white/5 text-white font-medium tracking-wide leading-tight shadow-sm">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-75 h-auto sm:h-0 group-hover:h-auto overflow-hidden">
+                    {cat.items.map((item) => (
+                      <span key={item} className="text-[0.8rem] sm:text-[0.9rem] px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/10 sm:bg-white/5 backdrop-blur-md border border-white/10 sm:border-white/5 text-white/90 font-medium tracking-wide">
                         {item}
                       </span>
                     ))}
                   </div>
-
-                  <div className="opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-700 delay-200">
+                  
+                  <div className="opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-150">
                     <CTAButton 
-                      text="Create Signature Look" 
-                      href="/contact"
-                      className="w-full justify-center !py-2 sm:!py-3 !text-[0.7rem] sm:!text-sm"
+                      text="Explore Collection" 
+                      href={`/collections/${cat.slug}`}
+                      className="w-full justify-center !py-2.5 sm:!py-3 !text-[0.7rem] sm:!text-xs tracking-[0.2em]"
                       showIcon={false}
                     />
                   </div>
@@ -106,15 +66,11 @@ export default function Collections() {
         </div>
       </SectionWrapper>
 
-      {/* Global Collection Footer CTA */}
-      <SectionWrapper id="collections-cta" alternateBg={true} className="mt-[100px] container mx-auto px-10 max-w-[1400px]">
-        <div className="glass-panel p-16 rounded-[3rem] text-center reveal border-accent-gold/10">
+      <SectionWrapper id="collections-cta" alternateBg className="mt-[100px] container mx-auto px-10 max-w-[1400px]">
+        <div className="glass-panel p-16 rounded-[3rem] text-center border-accent-gold/10">
           <h2 className="mb-6">Didn&apos;t find what you&apos;re looking for?</h2>
-          <p className="text-text-secondary mb-10 max-w-xl mx-auto font-light">We specialize in custom creations beyond our current catalog. Let's discuss your unique vision.</p>
-          <CTAButton 
-            text="Begin Your Custom Design" 
-            href="/contact"
-          />
+          <p className="text-text-secondary mb-10 max-w-xl mx-auto font-light">We specialize in custom creations beyond our current catalog. Let&apos;s discuss your unique vision.</p>
+          <CTAButton text="Begin Your Custom Design" href="/contact" />
         </div>
       </SectionWrapper>
     </div>

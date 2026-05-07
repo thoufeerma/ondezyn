@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
-import { Quote, Package } from "lucide-react";
+import { Quote, Package, Target, Eye, Globe } from "lucide-react";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -198,66 +198,65 @@ export default function Home() {
         <div className="container mx-auto px-5 lg:px-10 max-w-[1200px]">
           
           {/* ── Section Header ── */}
-          <div className="text-center mb-16 lg:mb-24 reveal">
-            <h4 className="text-accent-orange tracking-[0.3em] uppercase text-[10px] lg:text-xs mb-6 font-bold opacity-70">The Foundation</h4>
-            <h2 className="mb-8 lg:mb-10 text-4xl lg:text-6xl">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
+          <div className="text-center mb-16 lg:mb-32 reveal">
+            <h4 className="text-accent-gold tracking-[0.4em] uppercase text-[10px] lg:text-xs mb-6 font-bold opacity-80">The Foundation</h4>
+            <h2 className="mb-8 lg:mb-10 text-4xl lg:text-6xl tracking-tight">ONDEZYN <span className="gradient-text">PRIVATE LIMITED</span></h2>
             <p className="text-base lg:text-lg text-text-secondary leading-[1.8] max-w-3xl mx-auto font-light">
-              Founders <span className="text-white font-semibold">Hanslatha & Aneesh</span> started with a shared passion for redefining elegance. 
-              Born in the heart of Keralam, ONDEZYN is a sanctuary where creativity meets precision.
+              Founded with a shared passion for redefining elegance, ONDEZYN is a sanctuary where creativity meets precision. 
+              Born in the heart of Keralam, we craft more than just garments—we craft identities.
             </p>
           </div>
-
-          {/* ── 1. LARGE FEATURED CARD (IMAGE + TEXT) ── */}
-          <div className="reveal mb-16 lg:mb-24">
-            <div className="glass-panel rounded-[3.5rem] border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent overflow-hidden hover:border-accent-gold/30 hover:shadow-[0_40px_100px_rgba(212,175,55,0.12)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group">
-              <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
-                
-                {/* Left Side: Image Content */}
-                <div className="relative h-[400px] lg:h-auto min-h-[500px] lg:min-h-[650px] overflow-hidden">
+          <div className="mb-24 lg:mb-40">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+              
+              {/* Left Column: Visual Storytelling */}
+              <div className="relative group reveal">
+                {/* Main Large Image */}
+                <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl">
                   <Image 
                     src="/images/story_atelier.png" 
                     alt="The ONDEZYN Atelier" 
                     fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-[3000ms] ease-out opacity-70 grayscale-[30%] group-hover:grayscale-0" 
+                    className="object-cover transition-transform duration-[3000ms] ease-out group-hover:scale-105" 
+                    priority
                   />
-                  {/* Floating Detail Image */}
-                  <div className="absolute bottom-12 left-12 w-[48%] aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] z-10 hidden xl:block transition-transform duration-1000 group-hover:translate-y-[-10px]">
-                    <Image src="/images/story_stitching.png" alt="Craftsmanship detail" fill className="object-cover" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent lg:hidden"></div>
-                  {/* Decorative Border Overlay */}
-                  <div className="absolute inset-0 border-[20px] border-black/5 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
 
-                {/* Right Side: Editorial Content Area */}
-                <div className="p-10 lg:p-20 xl:p-24 flex flex-col justify-center relative bg-bg-dark/40 backdrop-blur-sm">
-                  <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-accent-gold/[0.02] to-transparent pointer-events-none"></div>
+                {/* Overlapping Mini Detail Image (Now visible on lg+) */}
+                <div className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12 w-[55%] aspect-square rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.6)] z-10 hidden md:block transition-transform duration-1000 group-hover:translate-y-[-10px] group-hover:scale-105">
+                  <Image src="/images/story_stitching.png" alt="Craftsmanship detail" fill className="object-cover" />
+                </div>
+              </div>
+
+              {/* Right Column: Editorial Narrative */}
+              <div className="flex flex-col justify-center reveal delay-200">
+                <div className="mb-8">
+                  <span className="text-[10px] lg:text-xs tracking-[0.5em] uppercase text-accent-gold font-bold">The ONDEZYN Heritage</span>
+                </div>
+                
+                <h3 className="text-5xl lg:text-6xl xl:text-8xl mb-12 font-heading text-white leading-[1] tracking-tight">
+                  The Story <br /> 
+                  <span className="text-accent-gold font-medium italic">Behind Us</span>
+                </h3>
+                
+                <div className="space-y-10 text-text-secondary text-lg lg:text-xl xl:text-2xl leading-[1.7] font-light">
+                  <p className="text-white/90 font-normal">
+                    Every masterpiece begins with a dialogue between vision and craft.
+                  </p>
                   
-                  {/* Subtle Label */}
-                  <div className="mb-6 reveal delay-100">
-                    <span className="text-[10px] lg:text-xs tracking-[0.4em] uppercase text-accent-gold/60 font-bold">Brand Philosophy</span>
+                  <div className="space-y-8 pl-6 border-l border-accent-gold/20">
+                    <p>
+                      <span className="text-accent-gold font-semibold tracking-wider mr-2 uppercase text-base">ON</span> represents the individual—your identity, your vision, and the unique story you bring to every design.
+                    </p>
+                    <p>
+                      <span className="text-accent-gold font-semibold tracking-wider mr-2 uppercase text-base">DEZYN</span> represents the atelier—our heritage of craftsmanship, our hands, and the timeless art of tailoring.
+                    </p>
                   </div>
-                  
-                  {/* Elegant Editorial Heading */}
-                  <h3 className="text-4xl lg:text-5xl xl:text-7xl mb-12 font-heading text-white leading-[1.05] tracking-tight reveal delay-200">
-                    The Story Behind <br /> 
-                    <span className="text-accent-gold font-medium tracking-[0.02em]">ONDEZYN</span>
-                  </h3>
-                  
-                  {/* Refined Storytelling Content */}
-                  <div className="space-y-8 text-text-secondary text-base lg:text-lg xl:text-xl leading-[1.8] font-light reveal delay-300">
-                    <div className="space-y-8 max-w-xl">
-                      <p>
-                        Our name is our philosophy. <span className="text-accent-gold font-semibold uppercase tracking-wider text-sm lg:text-base mr-1">ON</span> represents your identity, vision, and the unique individuality you bring to every design.
-                      </p>
-                      <p>
-                        <span className="text-accent-gold font-semibold uppercase tracking-wider text-sm lg:text-base mr-1">DEZYN</span> represents our dedicated art of craftsmanship and the custom fashion artistry we weave into every garment.
-                      </p>
-                      <p className="pt-8 border-t border-white/10 text-white/80 leading-relaxed italic">
-                        Together, <span className="text-white font-medium">ONDEZYN</span> reflects personalized luxury tailored entirely around <span className="text-accent-gold font-medium">you</span>.
-                      </p>
-                    </div>
-                  </div>
+
+                  <p className="pt-10 border-t border-white/5 text-white/70 italic text-base lg:text-lg">
+                    Together, ONDEZYN reflects a philosophy of personalized luxury, where every stitch is a testament to the harmony between the visionary and the artisan.
+                  </p>
                 </div>
               </div>
             </div>
@@ -268,7 +267,9 @@ export default function Home() {
             
             {/* Mission Card */}
             <div className="glass-panel p-10 rounded-[2.5rem] border border-white/5 hover:border-accent-red/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(211,47,47,0.08)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col">
-              <div className="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center text-accent-red text-lg font-bold mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">M</div>
+              <div className="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center text-accent-red mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">
+                <Target size={24} strokeWidth={2} />
+              </div>
               <h3 className="text-2xl mb-5 font-heading text-white/95">Our Mission</h3>
               <p className="text-text-secondary italic text-base lg:text-lg leading-[1.7] font-light flex-1">
                 &quot;To craft custom tailored outfits with Creativity, Precision, and Passion to ensure every client feels unique.&quot;
@@ -277,7 +278,9 @@ export default function Home() {
 
             {/* Vision Card (Teal/Emerald Color Update) */}
             <div className="glass-panel p-10 rounded-[2.5rem] border border-white/5 hover:border-[#10b981]/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(16,185,129,0.08)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col">
-              <div className="w-12 h-12 rounded-2xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] text-lg font-bold mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">V</div>
+              <div className="w-12 h-12 rounded-2xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">
+                <Eye size={24} strokeWidth={2} />
+              </div>
               <h3 className="text-2xl mb-5 font-heading text-white/95">Our Vision</h3>
               <p className="text-text-secondary italic text-base lg:text-lg leading-[1.7] font-light flex-1">
                 &quot;To become a Leading Network of Premium Fashion Studios, redefining Elegance and Precision in every outfit.&quot;
@@ -286,7 +289,9 @@ export default function Home() {
 
             {/* Presence Card */}
             <div className="glass-panel p-10 rounded-[2.5rem] border border-white/5 hover:border-[#4f8ef7]/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(79,142,247,0.08)] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col">
-              <div className="w-12 h-12 rounded-2xl bg-[#4f8ef7]/10 flex items-center justify-center text-[#4f8ef7] text-lg font-bold mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">N</div>
+              <div className="w-12 h-12 rounded-2xl bg-[#4f8ef7]/10 flex items-center justify-center text-[#4f8ef7] mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">
+                <Globe size={24} strokeWidth={2} />
+              </div>
               <h3 className="text-2xl mb-5 font-heading text-white/95">Nationwide</h3>
               <p className="text-text-secondary text-base lg:text-lg leading-[1.7] font-light flex-1">
                 A growing movement with master artisans spanning across India, establishing a premium presence in every corner of the country.

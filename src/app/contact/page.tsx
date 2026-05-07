@@ -107,23 +107,7 @@ export default function Contact() {
           <div className="reveal">
             <h3 className="text-3xl mb-10 font-heading">Our <span className="text-accent-orange">Atelier</span></h3>
             
-            <div className="mt-8 mb-12 p-8 glass-panel rounded-2xl border-white/5 shadow-2xl">
-              <h4 className="text-white font-bold mb-4 tracking-wider uppercase text-xs opacity-50">Legal &amp; Registration</h4>
-              <div className="space-y-4 text-sm tracking-widest text-text-secondary uppercase">
-                <div className="flex justify-between border-b border-white/5 pb-2">
-                  <span>CIN NO</span>
-                  <span className="text-white">U14101KL2025PTC097419</span>
-                </div>
-                <div className="flex justify-between border-b border-white/5 pb-2">
-                  <span>PAN</span>
-                  <span className="text-white">AAECO8883G</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>TAN</span>
-                  <span className="text-white">TVDO01574G</span>
-                </div>
-              </div>
-            </div>
+
 
             <div className="flex flex-col gap-10">
               <div className="flex items-start gap-6 group">
@@ -162,10 +146,9 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* ── Social Media Icons ── */}
             <div className="mt-12 pt-10 border-t border-white/5">
               <h4 className="text-sm font-heading tracking-[0.2em] uppercase text-white/40 mb-6">Stay Connected</h4>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-10">
                 {socialLinks.map((social) => (
                   <a
                     key={social.id}
@@ -179,6 +162,25 @@ export default function Contact() {
                     {social.icon}
                   </a>
                 ))}
+              </div>
+
+              {/* Legal Details moved below Social Links */}
+              <div className="p-8 glass-panel rounded-2xl border-white/5 shadow-xl bg-white/[0.01]">
+                <h4 className="text-accent-gold font-bold mb-6 tracking-widest uppercase text-[10px] opacity-70">Legal & Registration</h4>
+                <div className="space-y-4 text-[10px] lg:text-xs tracking-[0.2em] text-text-secondary uppercase font-body">
+                  <div className="flex justify-between border-b border-white/5 pb-2">
+                    <span>CIN NO</span>
+                    <span className="text-white font-medium">U14101KL2025PTC097419</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-2">
+                    <span>PAN</span>
+                    <span className="text-white font-medium">AAECO8883G</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>TAN</span>
+                    <span className="text-white font-medium">TVDO01574G</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -223,7 +225,7 @@ export default function Contact() {
             <div className="lg:col-span-2 glass-panel rounded-[2rem] overflow-hidden border-white/5 shadow-2xl min-h-[360px] relative group">
               <div className="absolute inset-0 z-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.9!2d76.95!3d8.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOCwgS2VybGFtIFRyaXZhbmRydW0!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.2868228394463!2d77.027546375011!3d8.373448691668273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05af0016801e65%3A0x22de0aaa5771ad4e!2sONDEZYN%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1715088214346!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "360px", filter: "invert(90%) hue-rotate(180deg) saturate(0.8) contrast(0.9)" }}
