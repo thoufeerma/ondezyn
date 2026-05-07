@@ -99,8 +99,8 @@ export default function Home() {
                Fashion Studio
              </p>
           </div>
-          {/* Mobile Header (Only visible on small screens) — reduced top margin */}
-          <div className="lg:hidden text-center mb-1 reveal mt-8">
+          {/* Mobile Header (Only visible on small screens) — increased top margin to prevent subtitle overlap */}
+          <div className="lg:hidden text-center mb-1 reveal mt-24">
              <h1 className="text-4xl text-white font-heading tracking-tight mb-1 uppercase">
                <span className="text-accent-orange">ON</span>DEZYN
              </h1>
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
 
           {/* Center Layout Container — Vertical on mobile, Horizontal on desktop */}
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-0 lg:mt-[12vh] z-10">
+          <div className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mt-6 lg:mt-[12vh] z-10">
              
              {/* Left Block — CTA 1 */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left reveal-left delay-200 order-3 lg:order-1 mt-6 lg:mt-8">
