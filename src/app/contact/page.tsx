@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
-import { Phone, Mail, MapPin, ArrowRight, Instagram, Facebook, MessageCircle, QrCode, X } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, QrCode, X } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
