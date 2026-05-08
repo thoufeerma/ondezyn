@@ -157,7 +157,7 @@ export default function Home() {
              {/* Right Block — CTA 2 */}
              <div className="lg:w-[30%] flex flex-col items-center lg:items-end text-center lg:text-right reveal-right delay-200 order-4 lg:order-3 mt-6 lg:mt-8">
                 <div className="mb-4 lg:mb-10 hidden lg:block">
-                   <p className="text-white/50 text-sm font-light leading-relaxed border-t lg:border-t-0 lg:border-l border-accent-gold/30 pt-4 lg:pt-0 lg:pl-5 max-w-xs mx-auto lg:mx-0">
+                   <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs mx-auto lg:mx-0">
                      <span className="text-white/90 font-medium block mb-2 font-heading italic text-base">Where Identity Becomes Art.</span> 
                      Bespoke fashion refined for those who command presence.
                    </p>
@@ -317,19 +317,19 @@ export default function Home() {
               { 
                 title: "Bridal Wears", 
                 items: ["Bridal Blouses", "Bridal Lehenga", "Engagement Gowns", "Wedding Saree Styling"],
-                image: "/images/collection_bridal.png",
+                image: "/images/collections/bridal_main.png",
                 color: "from-white/10"
               },
               { 
                 title: "Accessories", 
                 items: ["Dupattas", "Falls & Pico", "Tassels & Latkans", "Premium fabrics"],
-                image: "/images/collections/accessories.png",
+                image: "/images/collections/accessories_main.png",
                 color: "from-accent-red/10"
               },
               { 
                 title: "Kids Specials", 
                 items: ["Birthday Outfits", "Festive Collections", "Pattu Pavada", "Princess style Dresses"],
-                image: "/images/collections/kids.png",
+                image: "/images/collections/kids_main.png",
                 color: "from-accent-gold/10"
               }
             ].map((cat, i) => (

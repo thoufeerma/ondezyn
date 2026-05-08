@@ -45,10 +45,10 @@ export const collectionsData: Record<string, Collection> = {
     heroImage: "/images/collections/party_main.png",
     description: "Make an unforgettable statement with our contemporary party wear, designed for the spotlight and crafted for elegance.",
     items: [
-      { name: "Indo Western Dresses", image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200", description: "The perfect fusion of global silhouettes and Indian artistry." },
-      { name: "Designer Gowns", image: "https://images.unsplash.com/photo-1599452388339-039c3629475e?q=80&w=1200", description: "Ethereal gowns that bring a touch of cinematic glamour." },
-      { name: "Crop top & Skirt sets", image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1200", description: "Chic, modern coordinates for the stylish celebrant." },
-      { name: "Fusion wear", image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1200", description: "Breaking boundaries with unique design combinations." }
+      { name: "Indo Western Dresses", image: "/images/collections/Party wears/Indo western.jpg", description: "The perfect fusion of global silhouettes and Indian artistry." },
+      { name: "Designer Gowns", image: "/images/collections/Party wears/Designer gowns.webp", description: "Ethereal gowns that bring a touch of cinematic glamour." },
+      { name: "Crop top & Skirt sets", image: "/images/collections/Party wears/Crop top & Skirt sets.jpg", description: "Chic, modern coordinates for the stylish celebrant." },
+      { name: "Fusion wear", image: "/images/collections/Party wears/Fusion wear.webp", description: "Breaking boundaries with unique design combinations." }
     ]
   },
   "bridal-wears": {
@@ -57,10 +57,10 @@ export const collectionsData: Record<string, Collection> = {
     heroImage: "/images/collections/bridal_main.png",
     description: "Your journey to the altar deserves a masterpiece. Our bridal collection is a testament to the art of the wedding, meticulously crafted for your most precious day.",
     items: [
-      { name: "Bridal Blouses", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200", description: "Intricately detailed blouses featuring Aari and Zardosi work." },
-      { name: "Bridal Lehenga", image: "https://images.unsplash.com/photo-1595919644098-fb0100c5031b?q=80&w=1200", description: "Grand, regal lehengas that tell a story of tradition and luxury." },
-      { name: "Engagement Gowns", image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1200", description: "Sophisticated gowns for the elegant precursor to your big day." },
-      { name: "Wedding Saree Styling", image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1200", description: "Expert saree styling and pre-pleating for a flawless bridal look." }
+      { name: "Bridal Blouses", image: "/images/collections/Bridal Wears/Designer blouse.jpg", description: "Intricately detailed blouses featuring Aari and Zardosi work." },
+      { name: "Bridal Lehenga", image: "/images/collections/Bridal Wears/Bridal lehenga.jpg", description: "Grand, regal lehengas that tell a story of tradition and luxury." },
+      { name: "Engagement Gowns", image: "/images/collections/Bridal Wears/Engagement gowns.webp", description: "Sophisticated gowns for the elegant precursor to your big day." },
+      { name: "Wedding Saree Styling", image: "/images/collections/Bridal Wears/Wedding saree styling.webp", description: "Expert saree styling and pre-pleating for a flawless bridal look." }
     ]
   },
   "accessories": {
@@ -69,9 +69,9 @@ export const collectionsData: Record<string, Collection> = {
     heroImage: "/images/collections/accessories_main.png",
     description: "Complete your ensemble with our curated range of accessories, from artisanal dupattas to premium fabrics that define your style.",
     items: [
-      { name: "Dupattas", image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1200", description: "Richly embroidered dupattas that transform any look." },
-      { name: "Tassels & Latkans", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200", description: "Custom handcrafted details to add a touch of whimsy." },
-      { name: "Premium fabrics", image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200", description: "Ethically sourced silks and handlooms for your bespoke designs." }
+      { name: "Dupattas", image: "/images/collections/Accessories/Dupattas.jpg", description: "Richly embroidered dupattas that transform any look." },
+      { name: "Tassels & Latkans", image: "/images/collections/Accessories/Tassels.jpg", description: "Custom handcrafted details to add a touch of whimsy." },
+      { name: "Premium fabrics", image: "/images/collections/Accessories/Premium fabrics.jpg", description: "Ethically sourced silks and handlooms for your bespoke designs." }
     ]
   },
   "kids-specials": {
@@ -80,9 +80,9 @@ export const collectionsData: Record<string, Collection> = {
     heroImage: "/images/collections/kids_main.png",
     description: "Because every little one deserves to feel like royalty. Our kids' collection combines comfort with couture for life's most joyful celebrations.",
     items: [
-      { name: "Birthday Outfits", image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=1200", description: "Whimsical and vibrant dresses for the most special milestones." },
-      { name: "Festive Collections", image: "https://images.unsplash.com/photo-1621430005523-6428c04ec47d?q=80&w=1200", description: "Traditional pattu pavada and lehengas for little icons." },
-      { name: "Princess style Dresses", image: "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?q=80&w=1200", description: "Fairytale-inspired gowns crafted with love and soft fabrics." }
+      { name: "Birthday Outfits", image: "/images/collections/Kids Specials/Birthday outfit.jpg", description: "Whimsical and vibrant dresses for the most special milestones." },
+      { name: "Festive Collections", image: "/images/collections/Kids Specials/Festive collection.jpg", description: "Traditional pattu pavada and lehengas for little icons." },
+      { name: "Princess style Dresses", image: "/images/collections/Kids Specials/princess.jpg", description: "Fairytale-inspired gowns crafted with love and soft fabrics." }
     ]
   }
 };
