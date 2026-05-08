@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 lg:pt-20 pb-6 lg:pb-10 px-5 lg:px-10 border-t border-black/5 bg-[#f8f8f8] relative z-10">
+    <footer className="pt-10 lg:pt-20 pb-6 lg:pb-10 px-5 lg:px-10 border-t border-black/5 bg-white/40 backdrop-blur-xl relative z-10">
       <div className="container mx-auto max-w-[1400px] grid grid-cols-2 lg:flex lg:flex-row justify-between items-start mb-6 lg:mb-16 gap-x-4 gap-y-6 lg:gap-0">
         <div className="col-span-2 lg:col-span-1 lg:max-w-sm flex flex-col lg:block">
           <div className="flex justify-between items-center lg:items-start lg:block mb-3 lg:mb-6">

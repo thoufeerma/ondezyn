@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#f8f8f8]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-black/5' : 'bg-white border-black/5 shadow-sm'}`}>
+      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] border-black/5' : 'bg-white/20 backdrop-blur-md border-black/5'}`}>
         <div className="flex items-center gap-3 lg:gap-6 z-[10]">
           <Link 
             href="/" 
