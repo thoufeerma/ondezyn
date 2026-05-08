@@ -50,14 +50,14 @@ export default function Home() {
       {/* Branded Loader */}
       {loading && (
         <div 
-          className="fixed inset-0 bg-bg-deep z-[10000] flex flex-col justify-center items-center transition-all duration-1000 ease-in-out" 
+          className="fixed inset-0 bg-[#f8f8f8] z-[10000] flex flex-col justify-center items-center transition-all duration-1000 ease-in-out" 
           style={{ opacity: progress === 100 ? 0 : 1, visibility: progress === 100 ? 'hidden' : 'visible' }}
         >
-          <div className="mb-10 animate-float-slow p-6 rounded-[2.5rem] bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+          <div className="mb-10 animate-float-slow">
             <Image src="/images/logo black.png" alt="ONDEZYN Logo" width={250} height={120} className="object-contain" priority unoptimized />
           </div>
-          <div className="w-[250px] h-[2px] bg-white/10 overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-accent-red to-accent-orange transition-all duration-100 ease-linear" style={{ width: `${progress}%` }}></div>
+          <div className="w-[250px] h-[2px] bg-black/5 overflow-hidden">
+            <div className="h-full bg-accent-orange transition-all duration-100 ease-linear" style={{ width: `${progress}%` }}></div>
           </div>
         </div>
       )}

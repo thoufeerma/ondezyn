@@ -57,11 +57,11 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#050505]/60 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] border-white/10' : 'bg-gradient-to-b from-black/40 to-transparent border-transparent'}`}>
+      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#f8f8f8]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-black/5' : 'bg-white border-black/5 shadow-sm'}`}>
         <div className="flex items-center gap-3 lg:gap-6 z-[10]">
           <Link 
             href="/" 
-            className="relative z-10 flex items-center justify-center p-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] group hover:bg-white/20 transition-all"
+            className="relative z-10 transition-transform duration-500 hover:scale-105"
             aria-label="ONDEZYN Home"
           >
             <Image
@@ -69,16 +69,16 @@ const Navbar = () => {
               alt="ONDEZYN™ Logo"
               width={135}
               height={50}
-              className="object-contain w-auto h-8 lg:h-10 transition-transform duration-500 group-hover:scale-105"
+              className="object-contain w-auto h-8 lg:h-10"
               priority
               unoptimized
             />
           </Link>
-          <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-white/10 h-10 lg:h-12">
-            <p className="text-[18px] lg:text-[26px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
+          <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-black/10 h-10 lg:h-12">
+            <p className="text-[18px] lg:text-[26px] text-black font-heading tracking-[0.2em] leading-none mb-1 uppercase">
               <span className="text-accent-orange">ON</span>DEZYN
             </p>
-            <p className="text-[14px] lg:text-[18px] text-accent-gold/90 font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
+            <p className="text-[14px] lg:text-[18px] text-accent-gold font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
           </div>
         </div>
 
@@ -97,11 +97,11 @@ const Navbar = () => {
               >
                 <Link
                   href={link.href}
-                  className={`text-[0.75rem] font-semibold uppercase tracking-[0.15em] relative py-1 transition-colors duration-300 flex items-center gap-1.5 ${isActive ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                  className={`text-[0.75rem] font-semibold uppercase tracking-[0.15em] relative py-1 transition-colors duration-300 flex items-center gap-1.5 ${isActive ? 'text-black' : 'text-black/60 hover:text-black'}`}
                 >
                   {link.name}
                   {hasDropdown && <ChevronDown size={14} className={`transition-transform duration-300 ${isCollectionsOpen ? 'rotate-180' : ''}`} />}
-                  <span className={`absolute -bottom-[2px] left-0 h-[1px] transition-all duration-300 ${isActive ? 'w-full bg-accent-gold' : 'w-0 group-hover:w-full bg-white/50'}`}></span>
+                  <span className={`absolute -bottom-[2px] left-0 h-[1.5px] transition-all duration-300 ${isActive ? 'w-full bg-accent-orange' : 'w-0 group-hover:w-full bg-black/20'}`}></span>
                 </Link>
 
                 {/* Dropdown Menu */}
@@ -127,7 +127,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <button
-          className="lg:hidden text-white/90 hover:text-white p-2 z-[10] transition-transform active:scale-95"
+          className="lg:hidden text-black/80 hover:text-black p-2 z-[10] transition-transform active:scale-95"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
         >
@@ -136,10 +136,10 @@ const Navbar = () => {
 
         {/* Mobile Branding (Centered) */}
         <div className="lg:hidden absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center h-10">
-          <p className="text-[16px] text-white font-heading tracking-[0.2em] leading-none mb-0.5 uppercase">
+          <p className="text-[16px] text-black font-heading tracking-[0.2em] leading-none mb-0.5 uppercase">
             <span className="text-accent-orange">ON</span>DEZYN
           </p>
-          <p className="text-[14px] text-accent-gold/90 font-script leading-none whitespace-nowrap">Fashion Studio</p>
+          <p className="text-[14px] text-accent-gold font-script leading-none whitespace-nowrap">Fashion Studio</p>
         </div>
       </header>
 
