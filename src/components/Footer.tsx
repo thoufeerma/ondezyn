@@ -6,12 +6,12 @@ import { MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 lg:pt-20 pb-6 lg:pb-10 px-5 lg:px-10 border-t border-black/5 bg-white/40 backdrop-blur-xl relative z-10">
+    <footer className="pt-10 lg:pt-20 pb-6 lg:pb-10 px-5 lg:px-10 border-t border-black/5 bg-[#fdfbf7]/50 backdrop-blur-xl relative z-10">
       <div className="container mx-auto max-w-[1400px] grid grid-cols-2 lg:flex lg:flex-row justify-between items-start mb-6 lg:mb-16 gap-x-4 gap-y-6 lg:gap-0">
         <div className="col-span-2 lg:col-span-1 lg:max-w-sm flex flex-col lg:block">
           <div className="flex justify-between items-center lg:items-start lg:block mb-3 lg:mb-6">
             <Link href="/" className="inline-block transition-transform duration-500 hover:scale-105">
-              <Image src="/images/logo black.png" alt="ONDEZYN™ Logo" width={110} height={40} className="object-contain lg:w-[150px] lg:h-[60px]" unoptimized />
+              <Image src="/images/logo black.png" alt="ONDEZYN™ Logo" width={198} height={72} className="object-contain lg:w-[270px] lg:h-[108px]" unoptimized />
             </Link>
             <div className="flex lg:hidden items-center gap-2">
               <a href="https://www.instagram.com/ondezyn/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center hover:bg-accent-orange hover:text-white transition-all"><Instagram size={14} /></a>

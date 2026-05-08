@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] border-black/5' : 'bg-white/20 backdrop-blur-md border-black/5'}`}>
+      <header className={`fixed top-0 left-0 right-0 h-[100px] lg:h-[130px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#fdfbf7]/50 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] border-black/5' : 'bg-[#fdfbf7]/30 backdrop-blur-md border-black/5'}`}>
         <div className="flex items-center gap-3 lg:gap-6 z-[10]">
           <Link 
             href="/" 
@@ -67,14 +67,14 @@ const Navbar = () => {
             <Image
               src="/images/logo black.png"
               alt="ONDEZYN™ Logo"
-              width={135}
-              height={50}
-              className="object-contain w-auto h-8 lg:h-10"
+              width={243}
+              height={90}
+              className="object-contain w-auto h-14 lg:h-[4.5rem]"
               priority
               unoptimized
             />
           </Link>
-          <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-black/10 h-10 lg:h-12">
+          <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-black/10 h-12 lg:h-16">
             <p className="text-[18px] lg:text-[26px] text-black font-heading tracking-[0.2em] leading-none mb-1 uppercase">
               <span className="text-accent-orange">ON</span>DEZYN
             </p>
