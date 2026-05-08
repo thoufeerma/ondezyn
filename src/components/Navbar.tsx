@@ -57,8 +57,9 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#050505]/60 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] border-white/10' : 'bg-gradient-to-b from-black/40 to-transparent border-transparent'}`}>
-        <div className="flex items-center gap-3 lg:gap-6 z-[10]">
+      <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-4 lg:px-8 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#050505]/60 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] border-white/10' : 'bg-gradient-to-b from-black/40 to-transparent border-transparent'}`}>
+        {/* Left Section: Logo */}
+        <div className="flex items-center z-[10] -ml-2 lg:-ml-4">
           <Link
             href="/"
             className="transition-transform hover:scale-105"
@@ -69,77 +70,74 @@ const Navbar = () => {
               alt="ONDEZYN™ Logo"
               width={260}
               height={90}
-              className="object-contain w-[150px] lg:w-[230px] h-auto"
+              className="object-contain w-[140px] lg:w-[200px] h-auto"
               priority
               unoptimized
             />
           </Link>
-          <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-white/10 h-10 lg:h-12">
-            <p className="text-[18px] lg:text-[26px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
-              <span className="text-accent-orange">ON</span>DEZYN
-            </p>
-            <p className="text-[14px] lg:text-[18px] text-accent-gold/90 font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
-          </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex gap-8 items-center">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            const hasDropdown = link.dropdown && link.dropdown.length > 0;
-
-            return (
-              <div 
-                key={link.name} 
-                className="relative group py-4"
-                onMouseEnter={() => hasDropdown && setIsCollectionsOpen(true)}
-                onMouseLeave={() => hasDropdown && setIsCollectionsOpen(false)}
-              >
-                <Link
-                  href={link.href}
-                  className={`text-[0.75rem] font-semibold uppercase tracking-[0.15em] relative py-1 transition-colors duration-300 flex items-center gap-1.5 ${isActive ? 'text-white' : 'text-white/60 hover:text-white'}`}
-                >
-                  {link.name}
-                  {hasDropdown && <ChevronDown size={14} className={`transition-transform duration-300 ${isCollectionsOpen ? 'rotate-180' : ''}`} />}
-                  <span className={`absolute -bottom-[2px] left-0 h-[1px] transition-all duration-300 ${isActive ? 'w-full bg-accent-gold' : 'w-0 group-hover:w-full bg-white/50'}`}></span>
-                </Link>
-
-                {/* Dropdown Menu */}
-                {hasDropdown && (
-                  <div className={`absolute top-full left-1/2 -translate-x-1/2 w-[220px] bg-[#0a0a0a] border border-white/10 rounded-xl overflow-hidden transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl ${isCollectionsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
-                    <div className="py-3">
-                      {link.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block px-6 py-3 text-[0.7rem] uppercase tracking-[0.1em] text-white/60 hover:text-white hover:bg-white/5 transition-all"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </nav>
-
-        {/* Mobile Menu Toggle Button */}
-        <button
-          className="lg:hidden text-white/90 hover:text-white p-2 z-[10] transition-transform active:scale-95"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-
-        {/* Mobile Branding (Centered) */}
-        <div className="lg:hidden absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center h-10">
-          <p className="text-[16px] text-white font-heading tracking-[0.2em] leading-none mb-0.5 uppercase">
+        {/* Center Section: Branding (Always Centered) */}
+        <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[5]">
+          <p className="text-[20px] lg:text-[34px] text-white font-heading font-bold tracking-tighter leading-none mb-0.5 lg:mb-1 uppercase select-none">
             <span className="text-accent-orange">ON</span>DEZYN
           </p>
-          <p className="text-[14px] text-accent-gold/90 font-script leading-none whitespace-nowrap">Fashion Studio</p>
+          <p className="text-[14px] lg:text-[22px] text-accent-gold font-script font-medium leading-none whitespace-nowrap mt-[-2%] lg:mt-[-1%] select-none">Fashion Studio</p>
+        </div>
+
+        {/* Right Section: Desktop Navigation / Mobile Toggle */}
+        <div className="flex items-center z-[10]">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex gap-8 items-center">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              const hasDropdown = link.dropdown && link.dropdown.length > 0;
+
+              return (
+                <div
+                  key={link.name}
+                  className="relative group py-4"
+                  onMouseEnter={() => hasDropdown && setIsCollectionsOpen(true)}
+                  onMouseLeave={() => hasDropdown && setIsCollectionsOpen(false)}
+                >
+                  <Link
+                    href={link.href}
+                    className={`text-[0.75rem] font-semibold uppercase tracking-[0.15em] relative py-1 transition-colors duration-300 flex items-center gap-1.5 ${isActive ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                  >
+                    {link.name}
+                    {hasDropdown && <ChevronDown size={14} className={`transition-transform duration-300 ${isCollectionsOpen ? 'rotate-180' : ''}`} />}
+                    <span className={`absolute -bottom-[2px] left-0 h-[1px] transition-all duration-300 ${isActive ? 'w-full bg-accent-gold' : 'w-0 group-hover:w-full bg-white/50'}`}></span>
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  {hasDropdown && (
+                    <div className={`absolute top-full left-1/2 -translate-x-1/2 w-[220px] bg-[#0a0a0a] border border-white/10 rounded-xl overflow-hidden transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl ${isCollectionsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+                      <div className="py-3">
+                        {link.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-6 py-3 text-[0.7rem] uppercase tracking-[0.1em] text-white/60 hover:text-white hover:bg-white/5 transition-all"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+
+          {/* Mobile Menu Toggle Button */}
+          <button
+            className="lg:hidden text-white/90 hover:text-white p-2 transition-transform active:scale-95"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </header>
 
