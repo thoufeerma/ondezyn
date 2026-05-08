@@ -54,7 +54,7 @@ export default function Home() {
           style={{ opacity: progress === 100 ? 0 : 1, visibility: progress === 100 ? 'hidden' : 'visible' }}
         >
           <div className="mb-10 animate-float-slow">
-            <Image src="/images/logo-light.png" alt="ONDEZYN Logo" width={250} height={120} className="object-contain" priority unoptimized />
+            <Image src="/images/logo black.png" alt="ONDEZYN Logo" width={250} height={120} className="object-contain" priority unoptimized />
           </div>
           <div className="w-[250px] h-[2px] bg-white/10 overflow-hidden">
             <div className="h-full bg-gradient-to-r from-accent-red to-accent-orange transition-all duration-100 ease-linear" style={{ width: `${progress}%` }}></div>
