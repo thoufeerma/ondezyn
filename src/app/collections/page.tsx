@@ -53,24 +53,24 @@ export default function CollectionsPage() {
                 </div>
 
                 {/* Bottom Section: CTA and Sub-features (Grid Layout) */}
-                <div className="mt-auto translate-y-20 group-hover:translate-y-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.2,1,0.3,1)]">
+                <div className="mt-auto translate-y-0 sm:translate-y-20 sm:group-hover:translate-y-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.2,1,0.3,1)]">
                   
                   {/* Explore Button - Just above sub-features */}
-                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-100 mb-10 -translate-x-6 group-hover:translate-x-0">
+                  <div className="opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-1000 delay-100 mb-6 sm:mb-10 translate-x-0 sm:-translate-x-6 sm:group-hover:translate-x-0">
                     <CTAButton 
                       text="Explore Collection" 
                       href={`/collections/${cat.slug}`}
-                      className="!bg-accent-gold !text-black !px-10 !py-4 !text-[0.75rem] sm:!text-[0.8rem] tracking-[0.25em] shadow-2xl hover:!scale-105 transition-transform"
+                      className="!bg-accent-gold !text-black !px-10 !py-4 !text-[0.7rem] sm:!text-[0.8rem] tracking-[0.25em] shadow-2xl hover:!scale-105 transition-transform w-full sm:w-auto justify-center sm:justify-start"
                       showIcon={true}
                     />
                   </div>
 
-                  <p className="text-white/40 text-[9px] tracking-[0.4em] uppercase mb-6 font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-300">Featured Styles</p>
+                  <p className="text-white/40 text-[9px] tracking-[0.4em] uppercase mb-4 sm:mb-6 font-bold opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-1000 delay-300">Featured Styles</p>
                   
                   {/* Structured 2-column Grid for Styles */}
-                  <div className="grid grid-cols-2 gap-2 sm:gap-3 opacity-0 group-hover:opacity-100 transition-all duration-[1200ms] delay-400">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-[1200ms] delay-400">
                     {cat.items.map((item) => (
-                      <span key={item} className="text-[0.65rem] sm:text-[0.75rem] px-3 sm:px-4 py-2.5 rounded-xl bg-white/5 backdrop-blur-2xl border border-white/10 text-white/80 font-light hover:bg-white/10 hover:text-white hover:border-accent-gold/40 transition-all duration-500 flex items-center justify-center text-center">
+                      <span key={item} className="text-[0.6rem] sm:text-[0.75rem] px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white/5 backdrop-blur-2xl border border-white/10 text-white/80 font-light hover:bg-white/10 hover:text-white hover:border-accent-gold/40 transition-all duration-500 flex items-center justify-center text-center leading-tight">
                         {item}
                       </span>
                     ))}

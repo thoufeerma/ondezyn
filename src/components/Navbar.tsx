@@ -75,10 +75,10 @@ const Navbar = () => {
             />
           </Link>
           <div className="hidden sm:flex flex-col items-center justify-center pl-4 lg:pl-6 border-l border-white/10 h-10 lg:h-12">
-            <p className="text-[12px] lg:text-[14px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
+            <p className="text-[18px] lg:text-[26px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
               <span className="text-accent-orange">ON</span>DEZYN
             </p>
-            <p className="text-[18px] lg:text-[22px] text-accent-gold/90 font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
+            <p className="text-[14px] lg:text-[18px] text-accent-gold/90 font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
           </div>
         </div>
 
@@ -136,10 +136,10 @@ const Navbar = () => {
 
         {/* Mobile Branding (Centered) */}
         <div className="lg:hidden absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center h-10">
-          <p className="text-[10px] text-white font-heading tracking-[0.2em] leading-none mb-0.5 uppercase">
+          <p className="text-[16px] text-white font-heading tracking-[0.2em] leading-none mb-0.5 uppercase">
             <span className="text-accent-orange">ON</span>DEZYN
           </p>
-          <p className="text-[16px] text-accent-gold/90 font-script leading-none whitespace-nowrap">Fashion Studio</p>
+          <p className="text-[14px] text-accent-gold/90 font-script leading-none whitespace-nowrap">Fashion Studio</p>
         </div>
       </header>
 

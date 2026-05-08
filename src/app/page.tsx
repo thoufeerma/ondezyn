@@ -82,7 +82,7 @@ export default function Home() {
            <div className="flex items-center gap-2 lg:gap-4 text-center" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9)' }}>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
               <span className="text-accent-gold tracking-[0.03em] lg:tracking-[0.1em] text-[10px] lg:text-sm font-medium italic opacity-80">
-                Brand that designs dreams into the perfect fit through luxury custom tailoring.
+                The Brand that designs dreams into the perfect fit through luxury custom tailoring.
               </span>
               <span className="h-[1px] w-4 lg:w-8 bg-accent-gold/70"></span>
            </div>
@@ -195,9 +195,12 @@ export default function Home() {
           <div className="text-center mb-16 lg:mb-32 reveal">
             <h4 className="text-accent-gold tracking-[0.4em] uppercase text-[10px] lg:text-xs mb-6 font-bold opacity-80">The Foundation</h4>
             <h2 className="mb-8 lg:mb-10 text-4xl lg:text-6xl tracking-tight text-white"><span className="text-accent-orange">ON</span>DEZYN PRIVATE LIMITED</h2>
-            <p className="text-base lg:text-lg text-text-secondary leading-[1.8] max-w-3xl mx-auto font-light">
+            <p className="text-base lg:text-lg text-text-secondary leading-[1.8] max-w-3xl mx-auto font-light mb-6">
               Founded with a shared passion for redefining elegance, ONDEZYN is a sanctuary where creativity meets precision. 
               Born in the heart of Keralam, we craft more than just garments—we craft identities.
+            </p>
+            <p className="text-accent-gold/80 text-sm lg:text-base italic font-medium tracking-wide">
+              Founders Hanslatha & Aneesh started at 22nd September 2025
             </p>
           </div>
           <div className="mb-24 lg:mb-40">
