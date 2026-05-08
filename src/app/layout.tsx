@@ -24,6 +24,10 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "ONDEZYN | Luxury Fashion & Tailoring",
   description: "Premium designer blouses, gowns, bridal work, and handloom products based in Kerala.",
+  icons: {
+    icon: "/images/logo-light.png",
+    apple: "/images/logo-light.png",
+  },
 };
 
 export default function RootLayout({
