@@ -65,11 +65,11 @@ const Navbar = () => {
             aria-label="ONDEZYN Home"
           >
             <Image
-              src="/images/logo-light.png"
+              src="/images/logo black.png"
               alt="ONDEZYN™ Logo"
-              width={280}
-              height={100}
-              className="object-contain w-[180px] lg:w-[280px] h-auto"
+              width={260}
+              height={90}
+              className="object-contain w-[150px] lg:w-[230px] h-auto"
               priority
               unoptimized
             />

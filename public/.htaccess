@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Handle 404 errors by serving the 404.html page
+  ErrorDocument 404 /404.html
+  
+  # Redirect /index.html to /
+  RewriteRule ^index\.html$ / [R=301,L]
+  
+  # Ensure clean URLs (optional, but helps if trailingSlash is true)
+  # This makes sure /contact/ redirects to /contact (if you prefer no slash)
+  # But since we set trailingSlash: true, we want the slash.
+</IfModule>
