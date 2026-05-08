@@ -66,7 +66,7 @@ const Navbar = () => {
             aria-label="ONDEZYN Home"
           >
             <Image
-              src="/images/logo black.png"
+              src="/images/logo black.webp"
               alt="ONDEZYN™ Logo"
               width={260}
               height={90}

@@ -29,19 +29,19 @@ export default function Fabrics() {
       icon: Palette, 
       title: "Aari work & Embroidery", 
       desc: "Intricate hand-work using traditional techniques to add regal textures and depth to your custom garments.",
-      image: "/images/fabrics/aari-embroidery.png"
+      image: "/images/fabrics/aari-embroidery.webp"
     },
     { 
       icon: Scissors, 
       title: "Pattern Customization", 
       desc: "Bespoke engineering of silhouettes, necklines, and sleeve designs to ensure your garment is a true reflection of you.",
-      image: "/images/fabrics/tailoring.png"
+      image: "/images/fabrics/tailoring.webp"
     },
     { 
       icon: Ruler, 
       title: "Fabric Selection Guidance", 
       desc: "Our master tailors guide you through weights, drapes, and color palettes to find the perfect foundation for your design.",
-      image: "/images/fabrics/handloom-weaving.png"
+      image: "/images/fabrics/handloom-weaving.webp"
     }
   ];
 
@@ -144,13 +144,13 @@ export default function Fabrics() {
               {/* Card 1: Pure Silk */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("/images/fabrics/pure-silk.png", "Pure Silk Handloom")}
+                onClick={() => openLightbox("/images/fabrics/pure-silk.webp", "Pure Silk Handloom")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/pure-silk.png", "Pure Silk Handloom")}
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/pure-silk.webp", "Pure Silk Handloom")}
                 aria-label="View Pure Silk image"
               >
-                <Image src="/images/fabrics/pure-silk.png" alt="Pure Silk" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/fabrics/pure-silk.webp" alt="Pure Silk" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
@@ -160,13 +160,13 @@ export default function Fabrics() {
               {/* Card 2: Kasavu */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("/images/fabrics/kasavu.png", "Kasavu Handloom")}
+                onClick={() => openLightbox("/images/fabrics/kasavu.webp", "Kasavu Handloom")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/kasavu.png", "Kasavu Handloom")}
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/kasavu.webp", "Kasavu Handloom")}
                 aria-label="View Kasavu image"
               >
-                <Image src="/images/fabrics/kasavu.png" alt="Kasavu" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/fabrics/kasavu.webp" alt="Kasavu" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
@@ -176,13 +176,13 @@ export default function Fabrics() {
               {/* Card 3: Bridal Collection Visual */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("/images/collection_bridal.png", "Bridal Couture Fabrics")}
+                onClick={() => openLightbox("/images/collection_bridal.webp", "Bridal Couture Fabrics")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collection_bridal.png", "Bridal Couture Fabrics")}
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collection_bridal.webp", "Bridal Couture Fabrics")}
                 aria-label="View Bridal Fabric image"
               >
-                <Image src="/images/collection_bridal.png" alt="Bridal Fabric" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/collection_bridal.webp" alt="Bridal Fabric" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
@@ -192,13 +192,13 @@ export default function Fabrics() {
               {/* Card 4: Saree Styling Visual */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("/images/collections/saree_item.png", "Saree Artistry")}
+                onClick={() => openLightbox("/images/collections/saree_item.webp", "Saree Artistry")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collections/saree_item.png", "Saree Artistry")}
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collections/saree_item.webp", "Saree Artistry")}
                 aria-label="View Saree Artistry image"
               >
-                <Image src="/images/collections/saree_item.png" alt="Saree Artistry" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/collections/saree_item.webp" alt="Saree Artistry" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
@@ -215,13 +215,13 @@ export default function Fabrics() {
           <div className="relative h-[600px] lg:h-[700px] reveal">
             <div
               className="absolute inset-0 bg-glass-bg rounded-[2.5rem] overflow-hidden border border-glass-border shadow-2xl group cursor-pointer"
-              onClick={() => openLightbox("/images/fabrics/feature.png", "Artisan Atelier")}
+              onClick={() => openLightbox("/images/fabrics/feature.webp", "Artisan Atelier")}
               role="button"
               tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/feature.png", "Artisan Atelier")}
+              onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/feature.webp", "Artisan Atelier")}
               aria-label="View Artisan Atelier image"
             >
-              <Image src="/images/fabrics/feature.png" alt="Artisan Atelier" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" />
+              <Image src="/images/fabrics/feature.webp" alt="Artisan Atelier" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="text-center px-6 py-4 bg-black/30 backdrop-blur-md rounded-2xl border border-white/5 shadow-2xl">

@@ -272,7 +272,7 @@ export default function Contact() {
               {/* QR code Image Container */}
               <div className="relative w-44 h-44 rounded-[2rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 overflow-hidden group-hover:border-accent-gold/30 transition-all duration-500 shadow-inner">
                 <Image 
-                  src="/images/QR code.jpeg" 
+                  src="/images/QR code.webp" 
                   alt="ONDEZYN Location QR" 
                   fill 
                   className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
@@ -301,7 +301,7 @@ export default function Contact() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image 
-                src="/images/QR code.jpeg" 
+                src="/images/QR code.webp" 
                 alt="ONDEZYN Location QR Full View" 
                 fill 
                 className="object-contain bg-white p-6 sm:p-10"

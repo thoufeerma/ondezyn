@@ -81,7 +81,7 @@ export default function Process() {
             </div>
             
             <div className="relative h-[250px] lg:h-[400px] rounded-2xl overflow-hidden border border-glass-border shadow-2xl mt-4 lg:mt-0">
-              <Image src="/images/story_stitching.png" alt="Craftsmanship" fill className="object-cover brightness-75 hover:scale-110 transition-transform duration-1000" />
+              <Image src="/images/story_stitching.webp" alt="Craftsmanship" fill className="object-cover brightness-75 hover:scale-110 transition-transform duration-1000" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-8">
                 <p className="text-white/90 text-sm lg:text-lg font-heading italic">"Every thread tells a story of dedication and precision."</p>

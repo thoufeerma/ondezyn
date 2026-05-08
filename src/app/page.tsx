@@ -54,7 +54,7 @@ export default function Home() {
           style={{ opacity: progress === 100 ? 0 : 1, visibility: progress === 100 ? 'hidden' : 'visible' }}
         >
           <div className="mb-10 animate-float-slow">
-            <Image src="/images/logo black.png" alt="ONDEZYN Logo" width={450} height={200} className="object-contain" priority unoptimized />
+            <Image src="/images/logo black.webp" alt="ONDEZYN Logo" width={450} height={200} className="object-contain" priority unoptimized />
           </div>
           <div className="w-[250px] h-[2px] bg-white/10 overflow-hidden">
             <div className="h-full bg-gradient-to-r from-accent-red to-accent-orange transition-all duration-100 ease-linear" style={{ width: `${progress}%` }}></div>
@@ -144,7 +144,7 @@ export default function Home() {
                   }}
                 >
                    <Image 
-                     src="/images/heromain.png" 
+                     src="/images/heromain.webp" 
                      alt="ONDEZYN Model" 
                      fill 
                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
@@ -211,7 +211,7 @@ export default function Home() {
                 {/* Main Large Image */}
                 <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl">
                   <Image 
-                    src="/images/story_atelier.png" 
+                    src="/images/story_atelier.webp" 
                     alt="The ONDEZYN Atelier" 
                     fill 
                     className="object-cover transition-transform duration-[3000ms] ease-out group-hover:scale-105" 
@@ -222,7 +222,7 @@ export default function Home() {
 
                 {/* Overlapping Mini Detail Image (Now visible on lg+) */}
                 <div className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12 w-[55%] aspect-square rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.6)] z-10 hidden md:block transition-transform duration-1000 group-hover:translate-y-[-10px] group-hover:scale-105">
-                  <Image src="/images/story_stitching.png" alt="Craftsmanship detail" fill className="object-cover" />
+                  <Image src="/images/story_stitching.webp" alt="Craftsmanship detail" fill className="object-cover" />
                 </div>
               </div>
 
@@ -317,19 +317,19 @@ export default function Home() {
               { 
                 title: "Bridal Wears", 
                 items: ["Bridal Blouses", "Bridal Lehenga", "Engagement Gowns", "Wedding Saree Styling"],
-                image: "/images/collections/bridal_main.png",
+                image: "/images/collections/bridal_main.webp",
                 color: "from-white/10"
               },
               { 
                 title: "Accessories", 
                 items: ["Dupattas", "Falls & Pico", "Tassels & Latkans", "Premium fabrics"],
-                image: "/images/collections/accessories_main.png",
+                image: "/images/collections/accessories_main.webp",
                 color: "from-accent-red/10"
               },
               { 
                 title: "Kids Specials", 
                 items: ["Birthday Outfits", "Festive Collections", "Pattu Pavada", "Princess style Dresses"],
-                image: "/images/collections/kids_main.png",
+                image: "/images/collections/kids_main.webp",
                 color: "from-accent-gold/10"
               }
             ].map((cat, i) => (
