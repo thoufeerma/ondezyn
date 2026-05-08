@@ -67,9 +67,9 @@ const Navbar = () => {
             <Image
               src="/images/logo black.png"
               alt="ONDEZYN™ Logo"
-              width={160}
-              height={60}
-              className="object-contain w-[110px] lg:w-[150px] h-auto"
+              width={240}
+              height={80}
+              className="object-contain w-[140px] lg:w-[200px] h-auto"
               priority
               unoptimized
             />
