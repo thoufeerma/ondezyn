@@ -59,9 +59,9 @@ const Navbar = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-6 lg:px-10 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#050505]/60 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] border-white/10' : 'bg-gradient-to-b from-black/40 to-transparent border-transparent'}`}>
         <div className="flex items-center gap-3 lg:gap-6 z-[10]">
-          <Link
-            href="/"
-            className="transition-transform hover:scale-105"
+          <Link 
+            href="/" 
+            className="relative z-10 flex items-center justify-center p-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] group hover:bg-white/20 transition-all"
             aria-label="ONDEZYN Home"
           >
             <Image
@@ -69,7 +69,7 @@ const Navbar = () => {
               alt="ONDEZYN™ Logo"
               width={135}
               height={50}
-              className="object-contain w-[85px] lg:w-[120px] h-auto"
+              className="object-contain w-auto h-8 lg:h-10 transition-transform duration-500 group-hover:scale-105"
               priority
               unoptimized
             />
