@@ -59,7 +59,7 @@ const Navbar = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 h-[80px] lg:h-[100px] flex items-center justify-between px-4 lg:px-8 z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-[#050505]/60 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] border-white/10' : 'bg-gradient-to-b from-black/40 to-transparent border-transparent'}`}>
         {/* Left Section: Logo & Desktop Branding */}
-        <div className="flex items-center z-[10] -ml-2 lg:-ml-0">
+        <div className="flex items-center z-[10] -ml-4 lg:-ml-0">
           <Link
             href="/"
             className="transition-transform hover:scale-105"
@@ -70,27 +70,35 @@ const Navbar = () => {
               alt="ONDEZYN™ Logo"
               width={260}
               height={90}
-              className="object-contain w-[130px] lg:w-[220px] h-auto"
+              className="object-contain w-[100px] lg:w-[220px] h-auto"
               priority
               unoptimized
             />
           </Link>
           
-          {/* Desktop-only Branding (Restored original style) */}
-          <div className="hidden lg:flex flex-col items-center justify-center pl-6 border-l border-white/10 h-12 ml-6">
-            <p className="text-[26px] text-white font-heading tracking-[0.2em] leading-none mb-1 uppercase">
-              <span className="text-accent-orange">ON</span>DEZYN
-            </p>
-            <p className="text-[18px] text-accent-gold/90 font-script leading-none whitespace-nowrap -ml-0.5">Fashion Studio</p>
+          <div className="hidden lg:flex items-center justify-center pl-6 border-l border-white/10 h-12 ml-6">
+            <Image
+              src="/images/fashion studio.png"
+              alt="ONDEZYN Fashion Studio"
+              width={250}
+              height={60}
+              className="object-contain h-12 w-auto"
+              priority
+              unoptimized
+            />
           </div>
         </div>
 
-        {/* Center Section: Mobile Branding (Always Centered on mobile, hidden on desktop) */}
-        <div className="lg:hidden absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[5]">
-          <p className="text-[20px] text-white font-heading font-bold tracking-tighter leading-none mb-0.5 uppercase select-none">
-            <span className="text-accent-orange">ON</span>DEZYN
-          </p>
-          <p className="text-[14px] text-accent-gold font-script font-medium leading-none whitespace-nowrap mt-[-2%] select-none">Fashion Studio</p>
+        <div className="lg:hidden absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none z-[5]">
+          <Image
+            src="/images/fashion studio.png"
+            alt="ONDEZYN Fashion Studio"
+            width={180}
+            height={45}
+            className="object-contain h-8 w-auto"
+            priority
+            unoptimized
+          />
         </div>
 
         {/* Right Section: Desktop Navigation / Mobile Toggle */}
@@ -183,7 +191,13 @@ const Navbar = () => {
           style={{ transitionDelay: "450ms" }}
         >
           <span className="w-12 h-[1px] bg-accent-gold/20 mb-6"></span>
-          <p className="text-[10px] tracking-[0.3em] uppercase text-white/30 font-medium">ONDEZYN Fashion Studio</p>
+          <Image
+            src="/images/fashion studio.png"
+            alt="ONDEZYN Fashion Studio"
+            width={120}
+            height={30}
+            className="object-contain h-6 w-auto opacity-30"
+          />
         </div>
       </div>
     </>

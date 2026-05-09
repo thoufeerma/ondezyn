@@ -192,13 +192,13 @@ export default function Fabrics() {
               {/* Card 4: Saree Styling Visual */}
               <div
                 className="aspect-square bg-white/5 rounded-2xl border border-white/10 group overflow-hidden relative shadow-2xl cursor-pointer"
-                onClick={() => openLightbox("/images/collections/saree_item.webp", "Saree Artistry")}
+                onClick={() => openLightbox("/images/fabrics/4th item.webp", "Saree Artistry")}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/collections/saree_item.webp", "Saree Artistry")}
+                onKeyDown={(e) => e.key === "Enter" && openLightbox("/images/fabrics/4th item.webp", "Saree Artistry")}
                 aria-label="View Saree Artistry image"
               >
-                <Image src="/images/collections/saree_item.webp" alt="Saree Artistry" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/images/fabrics/4th item.webp" alt="Saree Artistry" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <ZoomIn size={14} />
