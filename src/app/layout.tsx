@@ -25,8 +25,28 @@ export const metadata: Metadata = {
   title: "ONDEZYN | Luxury Fashion & Tailoring",
   description: "Premium designer blouses, gowns, bridal work, and handloom products based in Kerala.",
   icons: {
-    icon: "/images/favicon-square.webp",
-    apple: "/images/favicon-square.webp",
+    icon: [
+      { url: '/fav/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/fav/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/fav/favicon.ico',
+    apple: [
+      { url: '/fav/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        url: '/fav/android-chrome-192x192.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '512x512',
+        url: '/fav/android-chrome-512x512.png',
+      },
+    ],
   },
 };
 
